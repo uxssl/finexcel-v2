@@ -1,0 +1,678 @@
+/* ==========================================================================
+   FinExcel — Variation 02 brand layer on top of reak.css
+   Load after reak.css. Colours come from the FinExcel logo:
+   Excel = dark navy authority tones, Fin = cyan supporting tones.
+   ========================================================================== */
+
+:root {
+  --fx-navy-950: #06121f;
+  --fx-navy-900: #0b1f3a;
+  --fx-navy-800: #12305a;
+  --fx-blue-600: #2858a8; /* logo royal blue */
+  --fx-cyan-400: #5fbde6; /* logo cyan, lifted */
+  --fx-cyan-300: #a6d9f2;
+  --fx-cyan-100: #e8f4fb;
+  --fx-paper: #f4f9fc;
+  --fx-line: rgba(11, 31, 58, 0.12);
+
+  --oit-theme-1: var(--fx-navy-900);
+  --oit-grey-1: var(--fx-paper);
+}
+
+::selection {
+  background: var(--fx-cyan-300);
+  color: var(--fx-navy-950);
+}
+
+:focus-visible {
+  outline: 2px solid var(--fx-blue-600);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--fx-navy-900);
+}
+
+/* Buttons ---------------------------------------------------------------- */
+.oit-btn-border.btn-black-bg {
+  border-color: var(--fx-navy-900);
+  background-color: var(--fx-navy-900);
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.oit-btn-border.btn-black-bg i {
+  color: var(--fx-navy-900);
+}
+.oit-btn-border.btn-black-bg:hover {
+  border-color: var(--fx-blue-600);
+  background-color: var(--fx-blue-600);
+}
+.oit-btn-border.btn-white-bg i {
+  background-color: var(--fx-blue-600);
+}
+.oit-btn-border.btn-white-bg:hover {
+  color: var(--fx-navy-900);
+  background-color: var(--fx-cyan-100);
+}
+
+/* Section labels: small cyan rule in front of the eyebrow */
+.oit-section-subtitle {
+  color: var(--fx-blue-600);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+.oit-section-subtitle::before {
+  content: "";
+  width: 22px;
+  height: 2px;
+  background: var(--fx-cyan-400);
+}
+.oit-section-subtitle.oit-text-white {
+  color: var(--fx-cyan-300);
+}
+.oit-section-title span.fx-accent,
+.fx-accent {
+  color: var(--fx-blue-600);
+}
+
+/* Header ----------------------------------------------------------------- */
+.oit-header-logo img,
+.oitoffcanvas__logo img {
+  height: auto;
+}
+.oit-header-menu nav ul li a:hover,
+.oit-header-menu nav ul li.active > a {
+  color: var(--fx-blue-600);
+}
+
+/* Hero ------------------------------------------------------------------- */
+/* Stand-in for the template's missing hero-2-bg.jpg: deep navy behind reeded glass,
+   drawn in CSS (no image request). Flutes are fine and even so they read as glass, not curtain. */
+.fx-hero {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--fx-navy-950);
+  background-image:
+    radial-gradient(55% 75% at 78% 18%, rgba(40, 88, 168, 0.7) 0%, rgba(40, 88, 168, 0) 70%),
+    radial-gradient(40% 60% at 0% 100%, rgba(28, 71, 131, 0.6) 0%, rgba(28, 71, 131, 0) 70%),
+    linear-gradient(160deg, var(--fx-navy-950) 0%, var(--fx-navy-900) 55%, var(--fx-navy-800) 100%);
+}
+/* faint reeded glass, only toward the right and fading out behind the copy */
+.fx-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: repeating-linear-gradient(90deg,
+    rgba(255, 255, 255, 0.022) 0px,
+    rgba(255, 255, 255, 0) 16px,
+    rgba(0, 0, 0, 0.05) 40px,
+    rgba(255, 255, 255, 0.022) 44px);
+  -webkit-mask-image: radial-gradient(70% 90% at 85% 30%, #000 0%, transparent 75%);
+  mask-image: radial-gradient(70% 90% at 85% 30%, #000 0%, transparent 75%);
+}
+/* light moving behind the glass */
+.fx-hero-glow {
+  position: absolute;
+  z-index: -1;
+  top: -10%;
+  left: 40%;
+  width: 46vw;
+  height: 70%;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(95, 189, 230, 0.32), rgba(95, 189, 230, 0));
+  filter: blur(20px);
+  animation: fx-glow-drift 16s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+@keyframes fx-glow-drift {
+  from { transform: translateX(-18vw); }
+  to { transform: translateX(14vw); }
+}
+.fx-hero-mark {
+  position: absolute;
+  z-index: -1;
+  top: -140px;
+  right: -180px;
+  width: 820px;
+  max-width: none;
+  opacity: 0.45;
+  pointer-events: none;
+}
+.fx-hero .container {
+  position: relative;
+  z-index: 1;
+}
+.fx-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  padding: 8px 16px 8px 12px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fx-cyan-300);
+  background: rgba(95, 189, 230, 0.08);
+  border: 1px solid rgba(95, 189, 230, 0.22);
+}
+.fx-hero-eyebrow i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--fx-cyan-400);
+  box-shadow: 0 0 0 4px rgba(95, 189, 230, 0.2);
+}
+.fx-hero .dg-hero-title {
+  font-size: clamp(54px, 9.3vw, 190px);
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+}
+.fx-hero .dg-hero-title img {
+  display: inline-block;
+  height: 0.72em;
+  width: auto;
+  aspect-ratio: 600 / 230;
+  object-fit: cover;
+  margin-right: 0.04em;
+  vertical-align: baseline;
+  transform: translateY(0.02em);
+  border-radius: 1000px;
+  box-shadow: 0 0 0 1px rgba(166, 217, 242, 0.35);
+}
+@media (max-width: 767px) {
+  .fx-hero .dg-hero-title img {
+    display: none;
+  }
+  .fx-hero-eyebrow {
+    font-size: 10.5px;
+    letter-spacing: 0.04em;
+    gap: 8px;
+    padding: 7px 12px 7px 10px;
+  }
+}
+.fx-hero .dg-hero-img {
+  width: min(42%, 600px);
+  border: 1px solid rgba(166, 217, 242, 0.25);
+  border-bottom: 0;
+  box-shadow: 0 -20px 80px rgba(95, 189, 230, 0.18);
+}
+.fx-hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 44px;
+  margin: 46px 0 0;
+  padding: 26px 0 0;
+  list-style: none;
+  border-top: 1px solid rgba(166, 217, 242, 0.18);
+}
+.fx-hero-stats strong {
+  display: block;
+  font-family: var(--oit-ff-heading);
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 1.1;
+  color: #fff;
+}
+.fx-hero-stats span {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.fx-hero .dg-hero-bdr {
+  border-color: rgba(166, 217, 242, 0.14);
+}
+
+/* Header sits on the deep hero (it is not sticky), so it uses the reversed treatment */
+.oit-header-transparent.oit-header-bdr {
+  border-color: rgba(166, 217, 242, 0.14);
+}
+.oit-header-transparent .oit-header-logo img {
+  filter: brightness(0) invert(1);
+}
+.oit-header-transparent .oit-header-menu nav > ul > li > a {
+  color: #fff;
+}
+.oit-header-transparent .oit-header-menu nav > ul > li > a:hover {
+  color: var(--fx-cyan-400);
+}
+.oit-header-transparent .oit-header-action .oit-btn-border.btn-black-bg {
+  color: var(--fx-navy-900);
+  border-color: #fff;
+  background-color: #fff;
+}
+.oit-header-transparent .oit-header-action .oit-btn-border.btn-black-bg i {
+  color: #fff;
+  background-color: var(--fx-blue-600);
+}
+@media (max-width: 1199px) {
+  .fx-hero .dg-hero-img {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    border-bottom: 1px solid rgba(166, 217, 242, 0.25);
+  }
+}
+@media (max-width: 575px) {
+  .fx-hero-caption {
+    display: none;
+  }
+}
+.fx-hero .dg-hero-title {
+  color: #fff;
+}
+.fx-hero .dg-hero-title .fx-accent {
+  color: var(--fx-cyan-400);
+}
+.fx-hero .dg-hero-img video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 702 / 385;
+  object-fit: cover;
+}
+.fx-hero-caption {
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 30px;
+  background: rgba(6, 18, 31, 0.55);
+  backdrop-filter: blur(8px);
+}
+.fx-hero .dg-hero-content p {
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 500;
+}
+.fx-hero .fx-text-link {
+  color: #fff;
+}
+.fx-hero .fx-text-link:hover {
+  color: var(--fx-cyan-400);
+}
+.fx-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px 28px;
+  margin-top: 40px;
+}
+.fx-text-link {
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--fx-navy-900);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+}
+.fx-text-link:hover {
+  color: var(--fx-blue-600);
+}
+
+/* About ------------------------------------------------------------------ */
+.fx-about .oit-text-revel {
+  color: var(--fx-navy-900);
+}
+.fx-about .oit-funfact-title {
+  color: var(--fx-navy-900);
+}
+.fx-about .oit-funfact-item span {
+  color: var(--oit-text-body);
+}
+.fx-figcaption {
+  display: block;
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--oit-text-body);
+}
+
+/* Practices (pinned panels) ------------------------------------------------ */
+.fx-practices {
+  background-color: var(--fx-navy-950);
+  background-image: url("../img/mark-bg.svg");
+  background-repeat: no-repeat;
+  background-size: 900px;
+  background-position: 115% -120px;
+}
+.fx-practices .oit-section-title {
+  color: #fff;
+}
+.fx-practices .oit-section-title .fx-accent {
+  color: var(--fx-cyan-400);
+}
+.fx-practices .oit-service-item {
+  border: 1px solid rgba(166, 217, 242, 0.14);
+}
+.fx-practices .oit-service-title a {
+  color: #fff;
+}
+.fx-practices .oit-service-category svg {
+  color: var(--fx-cyan-400);
+}
+.fx-practices .oit-service-thumb {
+  border-color: rgba(166, 217, 242, 0.35);
+}
+.fx-practice-no {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--fx-cyan-400);
+}
+
+/* Approach steps ----------------------------------------------------------- */
+.fx-steps .dg-step-item {
+  border-radius: 10px;
+}
+.fx-steps .dg-step-item > span {
+  color: var(--fx-blue-600);
+}
+.fx-steps .dg-step-big-text {
+  -webkit-text-stroke-color: rgba(40, 88, 168, 0.18);
+}
+
+/* Selected work ------------------------------------------------------------ */
+.fx-work .oit-project-category span {
+  color: var(--fx-navy-900);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+/* Leadership --------------------------------------------------------------- */
+.fx-leaders .dg-team-author-info span {
+  display: block;
+  color: var(--fx-blue-600);
+  font-weight: 500;
+}
+.fx-leaders .dg-team-author-info p {
+  margin: 8px 0 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--oit-text-body);
+}
+.fx-leaders .dg-team-author-wrap {
+  align-items: flex-start !important;
+}
+.fx-board-ex {
+  margin-top: 60px;
+  padding-top: 30px;
+  border-top: 1px solid var(--fx-line);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px 34px;
+}
+.fx-board-ex > span:first-child {
+  flex: 0 0 100%;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--oit-text-body);
+}
+.fx-board-ex > span {
+  font-family: var(--oit-ff-heading);
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--fx-navy-900);
+}
+
+/* Why FinExcel bento ------------------------------------------------------- */
+.fx-why .oit-bin-to-card-item.grey-bg {
+  background-color: var(--fx-paper);
+}
+.fx-why .oit-bin-to-card-item.black-bg {
+  background-color: var(--fx-navy-900);
+}
+.fx-why .oit-bin-to-card-item.black-bg .oit-bin-to-card-list svg path {
+  fill: var(--fx-cyan-400);
+}
+.fx-why .oit-bin-to-card-item.item-overlay::after {
+  background: linear-gradient(180deg, rgba(6, 18, 31, 0.25) 0%, rgba(6, 18, 31, 0.85) 100%);
+}
+.fx-why .item-overlay {
+  background-size: cover;
+  background-position: center;
+}
+.fx-big-stat {
+  display: block;
+  font-family: var(--oit-ff-heading);
+  font-weight: 700;
+  font-size: 120px;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: var(--fx-blue-600);
+}
+@media (max-width: 1399px) {
+  .fx-big-stat {
+    font-size: 90px;
+  }
+}
+.fx-why-photo {
+  margin-top: 40px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.fx-why-photo img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.fx-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 26px;
+}
+.fx-chips span {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 30px;
+  color: var(--fx-navy-900);
+  background: #fff;
+  border: 1px solid var(--fx-line);
+}
+.fx-mark {
+  position: absolute;
+  right: -90px;
+  bottom: -90px;
+  width: 340px;
+  opacity: 0.9;
+  z-index: -1;
+}
+
+/* Upcoming programmes (funfact rows) --------------------------------------- */
+.fx-events .dg-funfact-item {
+  border-color: var(--fx-line);
+  gap: 30px;
+}
+.fx-events .dg-funfact-title {
+  flex: 0 0 auto;
+  font-family: var(--oit-ff-heading);
+  color: var(--fx-navy-900);
+  font-size: 96px;
+}
+.fx-events .dg-funfact-title span {
+  color: var(--fx-blue-600);
+  font-size: 32px;
+  margin-left: 8px;
+}
+.fx-event-meta {
+  text-align: end;
+}
+.fx-event-meta em {
+  display: block;
+  margin-bottom: 6px;
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--fx-blue-600);
+}
+.fx-event-meta p {
+  color: var(--fx-navy-900);
+}
+.fx-note {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--oit-text-body);
+}
+@media (max-width: 1399px) {
+  .fx-events .dg-funfact-title {
+    font-size: 70px;
+  }
+}
+@media (max-width: 767px) {
+  .fx-events .dg-funfact-item {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 16px;
+  }
+  .fx-event-meta,
+  .fx-event-meta p {
+    text-align: start;
+  }
+  .fx-events .dg-funfact-title {
+    font-size: 56px;
+  }
+}
+
+/* Partner marquee ---------------------------------------------------------- */
+.fx-partners {
+  border-top: 1px solid var(--fx-line);
+  border-bottom: 1px solid var(--fx-line);
+  background: #fff;
+}
+.fx-partners-label {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--oit-text-body);
+}
+.fx-partners .oit-text-slider-item {
+  gap: 90px;
+  width: max-content;
+}
+.fx-partners .oit-text-slider-item img {
+  margin: 0;
+  height: 76px;
+  width: auto;
+  mix-blend-mode: multiply;
+  filter: grayscale(1);
+  opacity: 0.75;
+  transition: filter 0.3s, opacity 0.3s;
+}
+.fx-partners .oit-text-slider-item img:hover {
+  filter: none;
+  opacity: 1;
+}
+
+/* Testimonials ------------------------------------------------------------- */
+.fx-voices .dg-testimonial-item {
+  background: #fff;
+}
+.fx-voices .dg-testimonial-item .quote svg path {
+  fill: var(--fx-cyan-400);
+}
+.fx-voices .dg-testimonial-item .text-small span {
+  color: var(--fx-blue-600);
+}
+.fx-voices .dg-testimonial-authour-title {
+  color: var(--fx-navy-900);
+}
+.fx-initials {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  font-family: var(--oit-ff-heading);
+  font-weight: 600;
+  font-size: 20px;
+  color: #fff;
+  background: var(--fx-navy-900);
+}
+.fx-initials.is-placeholder {
+  color: var(--fx-navy-900);
+  background: var(--fx-cyan-100);
+}
+
+/* Contact ------------------------------------------------------------------ */
+.fx-contact {
+  background-image: url("../img/mark-bg.svg");
+  background-repeat: no-repeat;
+  background-size: 780px;
+  background-position: -260px 110%;
+}
+.fx-contact .dg-contact-info span {
+  color: var(--fx-cyan-300);
+}
+.fx-contact .oit-section-title {
+  color: #fff;
+}
+.fx-contact .oit-section-title .fx-accent {
+  color: var(--fx-cyan-400);
+}
+.fx-contact .dg-contact-input-box input:focus,
+.fx-contact .dg-contact-textarea-box textarea:focus {
+  border-color: var(--fx-cyan-400);
+}
+.fx-consent {
+  margin: -40px 0 30px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* FAQ ---------------------------------------------------------------------- */
+.fx-faq .oit-price-item {
+  background-color: var(--fx-navy-900);
+}
+.fx-faq .oit-price-title {
+  color: #fff;
+}
+.fx-faq .accordion-button {
+  color: var(--fx-navy-900);
+}
+.fx-faq .accordion-button:not(.collapsed) {
+  color: var(--fx-blue-600);
+}
+
+/* Closing marquee ------------------------------------------------------------ */
+.fx-closing .oit-text-slider-item span {
+  color: rgba(166, 217, 242, 0.22);
+}
+.fx-closing .oit-text-slider-item span svg path {
+  fill: var(--fx-cyan-400);
+}
+
+/* Footer ----------------------------------------------------------------- */
+.fx-footer .oit-footer-widget-menu ul li a:hover span,
+.fx-footer .oit-footer-widget-social a:hover span {
+  color: var(--fx-cyan-400);
+}
+.fx-footer .oit-footer-widget {
+  background-color: var(--fx-navy-900);
+  border-color: rgba(166, 217, 242, 0.1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .oit-text-slider-item,
+  .fx-hero-glow {
+    animation: none !important;
+  }
+}

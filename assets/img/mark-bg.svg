@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <!-- Oversized tone-on-tone echo of the FinExcel globe: diagonal ribbons inside a sphere.
+       White at low alpha so it reads as a lighter shade of whatever dark surface sits behind it. -->
+  <defs>
+    <clipPath id="g"><circle cx="500" cy="500" r="490"/></clipPath>
+  </defs>
+  <g clip-path="url(#g)" fill="none" stroke-linecap="butt" transform="rotate(-28 500 500)">
+    <path d="M-120 150 C 220 40, 640 60, 1120 230" stroke="#fff" stroke-opacity=".05" stroke-width="150"/>
+    <path d="M-120 380 C 240 260, 660 290, 1120 470" stroke="#fff" stroke-opacity=".085" stroke-width="160"/>
+    <path d="M-120 615 C 250 495, 670 525, 1120 705" stroke="#fff" stroke-opacity=".06" stroke-width="160"/>
+    <path d="M-120 850 C 240 735, 650 760, 1120 935" stroke="#fff" stroke-opacity=".04" stroke-width="150"/>
+  </g>
+</svg>
