@@ -676,3 +676,703 @@ h1, h2, h3, h4, h5, h6 {
     animation: none !important;
   }
 }
+
+/* ==========================================================================
+   Variation 03 homepage (index.html, Reak "Solo Design Agency" layout).
+   Scoped to body.fx-v3 so the Variation 02 page keeps its look.
+   ========================================================================== */
+
+/* Hero: full-bleed Dhaka clip under a navy wash */
+.fx-v3 .fx-sd-hero {
+  background-color: var(--fx-navy-950);
+}
+/* The video and its dark wash are the template's own (sd-hero-bg::after); only the type is FinExcel's. */
+.fx-v3 .sd-hero-video video {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.fx-v3 .fx-sd-hero .fx-hero-eyebrow {
+  margin-bottom: 40px;
+}
+.fx-v3 .sd-hero-title {
+  font-size: clamp(64px, 16.5vw, 300px);
+  letter-spacing: -0.03em;
+  margin-bottom: 180px;
+}
+.fx-v3 .sd-hero-title .fx-accent {
+  color: var(--fx-cyan-400);
+}
+.fx-v3 .sd-hero-info span,
+.fx-v3 .sd-hero-info a {
+  font-size: 17px;
+  letter-spacing: -0.01em;
+  color: rgba(255, 255, 255, 0.86);
+}
+.fx-v3 .sd-hero-info a {
+  color: #fff;
+  border-bottom: 1px solid rgba(166, 217, 242, 0.5);
+}
+.fx-v3 .sd-hero-info a:hover {
+  color: var(--fx-cyan-400);
+}
+@media (max-width: 991px) {
+  .fx-v3 .sd-hero-title {
+    margin-bottom: 100px;
+  }
+}
+@media (max-width: 575px) {
+  .fx-v3 .fx-sd-hero .sd-hero-info {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 16px;
+  }
+}
+
+/* About tabs */
+.fx-v3 .sd-about-mission-wrap .nav-tab li button.active {
+  color: var(--fx-blue-600);
+}
+
+/* Practices: light pinned panels */
+.fx-v3 .fx-sd-practices .oit-service-item {
+  border: 1px solid var(--fx-line);
+}
+.fx-v3 .fx-sd-practices .fx-practice-no {
+  color: var(--fx-blue-600);
+}
+.fx-v3 .fx-sd-practices .oit-service-title a,
+.fx-v3 .fx-sd-practices .oit-service-category span {
+  color: var(--fx-navy-900);
+}
+.fx-v3 .fx-sd-practices .oit-service-category svg {
+  color: var(--fx-blue-600);
+}
+.fx-v3 .fx-sd-practices .oit-service-thumb img {
+  border-radius: 10px;
+}
+
+/* In numbers */
+.fx-sd-numbers .sd-funfact-title {
+  font-family: var(--oit-ff-heading);
+  font-weight: 600;
+  font-size: 96px;
+  color: var(--fx-navy-900);
+}
+.fx-sd-numbers .sd-content-white .sd-funfact-title {
+  color: #fff;
+}
+.fx-sd-numbers .sd-funfact-card span {
+  color: var(--fx-navy-900);
+}
+.fx-sd-numbers .sd-funfact-card.sd-content-white span {
+  color: rgba(255, 255, 255, 0.85);
+}
+.fx-sd-numbers .sd-funfact-card {
+  overflow: hidden;
+  border: 1px solid var(--fx-line);
+}
+.fx-card-mark {
+  position: absolute;
+  z-index: -1;
+  right: -120px;
+  bottom: -120px;
+  width: 340px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+.fx-numbers-mark {
+  position: absolute;
+  top: -40px;
+  right: 6%;
+  width: 380px;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* Why FinExcel: photo under navy, cards pin as you scroll */
+.fx-sd-why {
+  position: relative;
+  isolation: isolate;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.fx-sd-why::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(6, 18, 31, 0.88) 0%, rgba(11, 31, 58, 0.78) 50%, rgba(6, 18, 31, 0.9) 100%);
+}
+.fx-sd-why .oit-section-subtitle {
+  margin-bottom: 20px;
+}
+.fx-sd-why .oit-section-title {
+  color: #fff;
+}
+.fx-sd-why .sd-choose-card-inner,
+.fx-sd-why .sd-choose-card-head {
+  border-color: var(--fx-line);
+}
+.fx-sd-why .sd-choose-card-icon {
+  color: var(--fx-blue-600);
+}
+.fx-sd-why .sd-choose-card-title {
+  color: var(--fx-navy-900);
+}
+@media (max-width: 1199px) {
+  .fx-sd-why {
+    background-attachment: scroll;
+  }
+  .fx-sd-why .sd-choose-top {
+    margin-bottom: 60px;
+  }
+  .fx-sd-why .sd-choose-card {
+    margin-bottom: 30px;
+  }
+}
+
+/* Voices */
+.fx-sd-voices .st-testimonial-ratting {
+  display: block;
+  font-family: var(--oit-ff-heading);
+  font-size: 120px;
+  color: var(--fx-blue-600);
+}
+.fx-sd-voices .st-testimonial-info span {
+  font-size: 22px;
+  color: var(--fx-navy-900);
+}
+.fx-sd-voices .dg-testimonial-item .text-small {
+  color: var(--oit-text-body);
+}
+
+/* Leadership rows */
+.fx-sd-team .sd-team-thumb img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  object-position: top;
+}
+.fx-sd-team .sd-team-content span {
+  color: var(--fx-blue-600);
+  font-weight: 500;
+}
+.fx-sd-team .sd-team-title {
+  color: var(--fx-navy-900);
+  font-size: 26px;
+}
+.fx-team-bio {
+  margin: 0;
+  max-width: 340px;
+  font-size: 16px;
+  line-height: 1.55;
+}
+.fx-sd-team .sd-team-row-wrap,
+.fx-sd-team .sd-team-row-item,
+.fx-sd-team .sd-team-row-item .row [class*=col]:not(:last-child) .sd-team-item {
+  border-color: var(--fx-line);
+}
+.fx-sd-team .sd-team-social a {
+  font-size: 18px;
+  line-height: 50px;
+  color: var(--fx-navy-900);
+  background-color: var(--fx-cyan-100);
+}
+.fx-sd-team .sd-team-social a:hover {
+  color: #fff;
+  background-color: var(--fx-navy-900);
+}
+@media (max-width: 1199px) {
+  .fx-sd-team .sd-team-row-item .row [class*=col]:not(:last-child) .sd-team-item {
+    border-right: 0;
+  }
+  .fx-sd-team .sd-team-item {
+    height: auto;
+  }
+}
+
+
+/* Footer */
+.fx-sd-footer {
+  position: relative;
+  overflow: hidden;
+}
+.fx-sd-footer .oit-footer-2-widget-logo img {
+  width: min(100%, 520px);
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+.fx-footer-mark {
+  position: absolute;
+  z-index: -1;
+  left: 30%;
+  bottom: -160px;
+  width: 620px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+.fx-sd-footer .oit-footer-2-widget-title {
+  color: var(--fx-cyan-300);
+}
+.fx-sd-footer .oit-footer-2-widget-social a:hover,
+.fx-sd-footer .oit-footer-2-widget-menu ul li a:hover,
+.fx-footer-contact a:hover {
+  color: var(--fx-cyan-400);
+}
+.fx-footer-contact {
+  margin-top: 20px;
+}
+.fx-footer-contact a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* --------------------------------------------------------------------------
+   Variation 03 customisation: FinExcel motifs worked into the theme parts
+   -------------------------------------------------------------------------- */
+
+/* Ribbon glyph from the logo globe (replaces the template sparkle) */
+.fx-ribbon {
+  flex: 0 0 auto;
+  color: var(--fx-blue-600);
+}
+.fx-v3 .oit-service-category .fx-ribbon {
+  margin-right: 10px;
+}
+.fx-sd-why .sd-choose-card-icon .fx-ribbon {
+  display: block;
+}
+
+.fx-v3 .fx-sd-hero { padding-bottom: 0; }
+.fx-hero-board {
+  margin-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(6, 18, 31, 0.5);
+  backdrop-filter: blur(6px);
+}
+.fx-hero-board .container {
+  gap: 10px 32px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.fx-hero-board-label {
+  flex: 0 0 auto;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--fx-cyan-300);
+}
+.fx-hero-board ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 26px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.fx-hero-board li {
+  font-family: var(--oit-ff-heading);
+  font-size: 17px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* Practice marquee (theme text slider) */
+.fx-practice-marquee {
+  background: var(--fx-paper);
+  border-top: 1px solid var(--fx-line);
+  border-bottom: 1px solid var(--fx-line);
+}
+.fx-practice-marquee .oit-text-slider-item {
+  width: max-content;
+  gap: 40px;
+}
+.fx-practice-marquee .oit-text-slider-item span {
+  font-family: var(--oit-ff-heading);
+  font-size: 64px;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: -0.02em;
+  color: var(--fx-navy-900);
+}
+.fx-practice-marquee .fx-mq-glyph .fx-ribbon {
+  margin: 0;
+  color: var(--fx-cyan-400);
+  animation: none;
+}
+@media (max-width: 767px) {
+  .fx-practice-marquee .oit-text-slider-item span { font-size: 40px; }
+  .fx-practice-marquee .fx-mq-glyph .fx-ribbon { width: 34px; height: 34px; }
+}
+
+/* Events: next-up feature + month timeline on navy */
+.fx-sd-events {
+  color: rgba(255, 255, 255, 0.8);
+}
+.fx-events-mark {
+  position: absolute;
+  top: -180px;
+  right: -220px;
+  width: 760px;
+  opacity: 0.9;
+  pointer-events: none;
+}
+.fx-sd-events .container { position: relative; }
+.fx-sd-events .oit-section-title,
+.fx-sd-events h3,
+.fx-sd-events h4 { color: #fff; }
+.fx-events-intro p { color: rgba(255, 255, 255, 0.72); }
+.fx-tag {
+  display: inline-block;
+  padding: 3px 11px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--fx-cyan-300);
+  background: rgba(95, 189, 230, 0.14);
+  border: 1px solid rgba(95, 189, 230, 0.28);
+}
+.fx-next-up {
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  background: var(--fx-navy-950);
+  border: 1px solid rgba(166, 217, 242, 0.14);
+}
+.fx-next-up-media { position: relative; }
+.fx-next-up-media img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.fx-next-up-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(6, 18, 31, 0) 45%, rgba(6, 18, 31, 0.85) 100%);
+}
+.fx-next-up-badge {
+  position: absolute;
+  z-index: 2;
+  top: 18px;
+  left: 18px;
+  padding: 6px 12px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fx-navy-900);
+  background: var(--fx-cyan-400);
+}
+.fx-next-up-date {
+  position: absolute;
+  z-index: 2;
+  left: 30px;
+  bottom: 20px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--fx-cyan-300);
+}
+.fx-next-up-date span {
+  font-family: var(--oit-ff-heading);
+  font-size: 80px;
+  font-weight: 600;
+  line-height: 0.9;
+  color: #fff;
+}
+.fx-next-up-body { padding: 28px 30px 34px; }
+.fx-next-up-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.65);
+}
+.fx-next-up h3 {
+  margin-bottom: 12px;
+  font-size: clamp(26px, 2.4vw, 36px);
+  line-height: 1.15;
+}
+.fx-next-up-body > p:not(.fx-next-up-meta) {
+  margin-bottom: 28px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.fx-timeline {
+  height: 100%;
+  padding: 28px 30px 24px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(166, 217, 242, 0.14);
+}
+.fx-timeline-head {
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(166, 217, 242, 0.14);
+}
+.fx-timeline-head h3 { margin-bottom: 14px; font-size: 24px; }
+.fx-chips-filter { display: flex; flex-wrap: wrap; gap: 8px; }
+.fx-chip {
+  padding: 6px 15px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  background: transparent;
+  border: 1px solid rgba(166, 217, 242, 0.25);
+  transition: background-color 0.2s, color 0.2s;
+}
+.fx-chip:hover { border-color: var(--fx-cyan-400); }
+.fx-chip[aria-pressed="true"] { color: var(--fx-navy-900); background: #fff; border-color: #fff; }
+.fx-month { padding-top: 22px; }
+.fx-month-label {
+  margin-bottom: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fx-cyan-400);
+}
+.fx-tl-list {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.fx-tl-list::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  bottom: 14px;
+  left: 27px;
+  width: 1px;
+  background: rgba(166, 217, 242, 0.18);
+}
+.fx-tl-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 0;
+}
+.fx-tl-day {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  font-family: var(--oit-ff-heading);
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--fx-navy-800);
+  border: 1px solid rgba(95, 189, 230, 0.35);
+}
+.fx-tl-main h4 {
+  margin-bottom: 6px;
+  font-size: 19px;
+  line-height: 1.25;
+}
+.fx-tl-main p {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.fx-tl-link {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  color: #fff;
+  border: 1px solid rgba(166, 217, 242, 0.25);
+  transition: background-color 0.2s, color 0.2s;
+}
+.fx-tl-link:hover { color: var(--fx-navy-900); background: var(--fx-cyan-400); border-color: var(--fx-cyan-400); }
+.fx-tl-empty { padding-top: 22px; }
+.fx-tl-empty a { color: var(--fx-cyan-300); text-decoration: underline; }
+.fx-tl-note {
+  margin: 18px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid rgba(166, 217, 242, 0.14);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.55);
+}
+@media (max-width: 575px) {
+  .fx-next-up-body, .fx-timeline { padding-left: 20px; padding-right: 20px; }
+  .fx-next-up-date span { font-size: 56px; }
+  .fx-tl-item { grid-template-columns: 48px minmax(0, 1fr) auto; gap: 14px; }
+  .fx-tl-day { width: 48px; height: 48px; font-size: 19px; }
+  .fx-tl-list::before { left: 23px; }
+}
+
+/* --------------------------------------------------------------------------
+   Variation 03 compact scale: the theme's display sizes (144px section titles,
+   45px lead text, 150px section padding) brought down to an institutional scale.
+   -------------------------------------------------------------------------- */
+/* Section rhythm */
+.fx-v3 .pt-150 { padding-top: 100px; }
+.fx-v3 .pb-150 { padding-bottom: 100px; }
+.fx-v3 .pt-130 { padding-top: 90px; }
+.fx-v3 .pt-120 { padding-top: 90px; }
+.fx-v3 .pb-120 { padding-bottom: 90px; }
+.fx-v3 .pb-100 { padding-bottom: 80px; }
+.fx-v3 .mb-120 { margin-bottom: 60px; }
+.fx-v3 .mb-100 { margin-bottom: 60px; }
+.fx-v3 .mb-90 { margin-bottom: 50px; }
+.fx-v3 .mt-90 { margin-top: 50px; }
+.fx-v3 .pl-265 { padding-left: 120px; }
+.fx-v3 .pl-70 { padding-left: 40px; }
+@media (max-width: 991px) {
+  .fx-v3 .pl-265, .fx-v3 .pl-70 { padding-left: 0; }
+}
+
+/* Type scale */
+.fx-v3 .oit-section-title { font-size: clamp(36px, 4.6vw, 64px); line-height: 1.08; }
+.fx-v3 .oit-section-title.fsz-60 { font-size: clamp(32px, 3.4vw, 44px); }
+.fx-v3 .sd-hero-title { font-size: clamp(56px, 11vw, 190px); margin-bottom: 150px; }
+.fx-v3 .sd-hero-bg { padding-top: 210px; }
+.fx-v3 .oit-about-text p { font-size: clamp(22px, 2.2vw, 30px); line-height: 1.3; }
+.fx-v3 .oit-service-title { font-size: clamp(26px, 2.4vw, 34px); }
+.fx-v3 .oit-service-content p { font-size: 16px; }
+.fx-v3 .oit-service-category span { font-size: 15px; }
+.fx-v3 .fx-sd-practices .oit-service-item { padding: 36px; }
+.fx-v3 .sd-service-style .oit-service-content p { margin-bottom: 30px; }
+.fx-v3 .fx-sd-practices .oit-service-thumb img { max-width: 340px; }
+.fx-v3 .dg-testimonial-item p.text-large { font-size: 21px; line-height: 1.4; }
+.fx-v3 .fx-sd-voices .st-testimonial-ratting { font-size: 80px; }
+.fx-v3 .fx-sd-voices .st-testimonial-info span { font-size: 18px; }
+.fx-v3 .oit-faq-accordion-wrap .accordion-button { font-size: 20px; }
+.fx-v3 .oit-price-title { font-size: 24px; }
+.fx-v3 .fx-board-ex > span { font-size: 18px; }
+@media (max-width: 991px) {
+  .fx-v3 .sd-hero-title { margin-bottom: 90px; }
+}
+
+/* Programmes: photo on top, details below (no text over faces) */
+.fx-v3 .fx-work-card {
+  height: calc(100% - 30px);
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid var(--fx-line);
+}
+.fx-v3 .fx-sd-work .st-project-thumb img {
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.fx-work-body { padding: 18px 20px 22px; }
+.fx-work-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.fx-work-meta span {
+  padding: 2px 10px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--fx-navy-800);
+  background: var(--fx-cyan-100);
+}
+.fx-work-meta span:first-child {
+  padding-left: 0;
+  font-weight: 700;
+  color: var(--fx-blue-600);
+  background: none;
+}
+.fx-work-title {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.3;
+}
+.fx-work-title a { color: var(--fx-navy-900); }
+
+/* In numbers */
+.fx-v3 .fx-sd-numbers .sd-funfact-title { font-size: 60px; }
+.fx-v3 .fx-sd-numbers .sd-funfact-card { padding: 28px; }
+.fx-v3 .fx-sd-numbers .sd-funfact-card span { font-size: 14px; }
+.fx-v3 .sd-funfact-card.card-1 { min-height: 170px; }
+.fx-v3 .sd-funfact-card.card-2 { min-height: 300px; }
+.fx-v3 .sd-funfact-card.card-3 { min-height: 210px; }
+.fx-v3 .sd-funfact-card.card-4 { min-height: 250px; }
+
+/* Why FinExcel */
+.fx-v3 .fx-sd-why .sd-choose-top { margin-bottom: 90px; }
+.fx-v3 .fx-sd-why .sd-choose-card { margin-bottom: 50px; }
+.fx-v3 .sd-choose-card-head { padding: 26px; }
+.fx-v3 .sd-choose-card-body { padding: 26px; }
+.fx-v3 .sd-choose-card-title { font-size: 22px; }
+.fx-v3 .sd-choose-card-body p { font-size: 15px; letter-spacing: 0; }
+.fx-v3 .sd-choose-card-icon .fx-ribbon { width: 36px; height: 36px; }
+.fx-v3 .sd-choose-top-content p { font-size: 16px; }
+
+/* Leadership */
+.fx-v3 .fx-sd-team .sd-team-thumb img { width: 88px; height: 88px; }
+.fx-v3 .fx-sd-team .sd-team-title { font-size: 20px; }
+.fx-v3 .fx-sd-team .sd-team-content span { font-size: 15px; }
+.fx-v3 .fx-team-bio { font-size: 15px; }
+.fx-v3 .sd-team-item { padding: 20px 0; }
+
+/* Marquee */
+.fx-v3 .fx-practice-marquee .oit-text-slider-item span { font-size: 36px; }
+.fx-v3 .fx-practice-marquee .fx-mq-glyph .fx-ribbon { width: 30px; height: 30px; }
+.fx-v3 .fx-practice-marquee { padding-top: 24px; padding-bottom: 24px; }
+
+/* Events */
+.fx-v3 .fx-next-up-media img { aspect-ratio: 2 / 1; }
+.fx-v3 .fx-next-up-date span { font-size: 52px; }
+.fx-v3 .fx-next-up-date { font-size: 13px; left: 24px; bottom: 16px; }
+.fx-v3 .fx-next-up-body { padding: 22px 24px 26px; }
+.fx-v3 .fx-next-up h3 { font-size: clamp(22px, 1.8vw, 26px); }
+.fx-v3 .fx-next-up-body > p:not(.fx-next-up-meta) { font-size: 15px; margin-bottom: 22px; }
+.fx-v3 .fx-timeline { padding: 22px 24px 20px; }
+.fx-v3 .fx-timeline-head h3 { font-size: 20px; }
+.fx-v3 .fx-tl-item { grid-template-columns: 46px minmax(0, 1fr) auto; gap: 14px; padding: 10px 0; }
+.fx-v3 .fx-tl-day { width: 46px; height: 46px; font-size: 18px; }
+.fx-v3 .fx-tl-list::before { left: 22px; }
+.fx-v3 .fx-tl-main h4 { font-size: 16px; }
+.fx-v3 .fx-tl-main p { font-size: 13px; }
+.fx-v3 .fx-tl-link { width: 36px; height: 36px; }
+.fx-v3 .fx-month { padding-top: 16px; }
+
+/* Footer */
+.fx-v3 .fx-sd-footer .oit-footer-2-widget-logo img { width: min(100%, 320px); }
+.fx-v3 .oit-footer-2-area .pb-195 { padding-bottom: 100px; }
+.fx-v3 .oit-footer-2-widget p { font-size: 16px; }
+
+/* Brand glyph where the template put people's faces */
+.fx-hero-glyph {
+  display: inline-flex;
+  margin-right: 18px;
+}
+.fx-hero-glyph .fx-ribbon { width: 48px; height: 48px; color: var(--fx-cyan-400); }
+.fx-faq-glyph .fx-ribbon { width: 48px; height: 48px; color: var(--fx-cyan-400); }
+.fx-faq-contact {
+  margin: 14px 0 0;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.fx-faq-contact a { color: #fff; border-bottom: 1px solid rgba(166, 217, 242, 0.5); }
+.fx-faq-contact a:hover { color: var(--fx-cyan-400); }

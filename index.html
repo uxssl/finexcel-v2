@@ -22,11 +22,21 @@
    <link rel="stylesheet" href="assets/css/finexcel.css">
 </head>
 
-<body>
+<body class="fx-v3">
    <!--
-      FinExcel — Variation 02 (home), built on the Reak "Digital Agency" layout (original kept in index-2-template.html).
-      Content mirrors Variation 01 (../finexcelbd/src/content). Items marked STAKEHOLDER need sign-off before launch.
+      FinExcel — Variation 03 (home), built on the Reak "Solo Design Agency" layout (original kept in index-4.html).
+      Previous homepage kept in index-finexcel-v2.html. Items marked STAKEHOLDER need sign-off before launch.
    -->
+   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <symbol id="fx-ribbon" viewBox="0 0 32 32">
+         <clipPath id="fx-ribbon-clip"><circle cx="16" cy="16" r="15"/></clipPath>
+         <g clip-path="url(#fx-ribbon-clip)" transform="rotate(-28 16 16)" fill="none" stroke="currentColor" stroke-width="5">
+            <path d="M-4 7 C 6 4, 20 4, 36 9" opacity=".45"/>
+            <path d="M-4 16 C 7 12, 21 13, 36 18"/>
+            <path d="M-4 25 C 7 21, 21 22, 36 27" opacity=".7"/>
+         </g>
+      </symbol>
+   </svg>
 
    <!-- Preloader -->
    <div id="preloader" class="is-loading">
@@ -74,37 +84,47 @@
 <div class="body-overlay"></div>
 
 <header>
-   <div class="oit-header-area oit-header-bdr oit-header-transparent">
+   <div class="oit-header-area oit-header-transparent">
       <div class="container">
-         <div class="p-relative">
-            <div class="row align-items-center">
-               <div class="col-xl-3 col-6">
-                  <div class="oit-header-logo">
-                     <a href="index.html"><img data-width="160" src="assets/img/logo.png" alt="FinExcel — Financial Excellence Limited"></a>
-                  </div>
+         <div class="row align-items-center">
+            <div class="col-lg-3 col-md-4 col-6">
+               <div class="oit-header-logo">
+                  <a href="index.html"><img data-width="160" src="assets/img/logo.png" alt="FinExcel — Financial Excellence Limited"></a>
                </div>
-               <div class="col-xl-6 d-none d-xl-inline-block">
-                  <div class="oit-header-menu oit-header-dropdown text-center">
+            </div>
+            <div class="col-lg-9 col-md-8 col-6">
+               <div class="oit-header-wrap d-flex justify-content-end align-items-center">
+                  <div class="oit-header-menu oit-header-menu-2 d-none d-xl-block">
                      <nav class="oit-menu-content" aria-label="Main">
                         <ul>
-<li><a href="index.html">Home</a></li>
-<li class="has-dropdown"><a href="about-v2.html">About</a><ul class="oit-submenu submenu"><li><a href="about-v2.html">About FinExcel</a></li>
-<li><a href="#why">Why FinExcel</a></li>
-<li><a href="#leadership">Leadership</a></li></ul></li>
-<li class="has-dropdown"><a href="#practices">Practices</a><ul class="oit-submenu submenu"><li><a href="service-details.html">Advisory</a></li>
-<li><a href="service-details.html">Capacity Building</a></li>
-<li><a href="service-details.html">Advocacy</a></li></ul></li>
-<li class="has-dropdown"><a href="blog.html">Insights</a><ul class="oit-submenu submenu"><li><a href="blog.html">Blog</a></li>
-<li><a href="blog-standard.html">News</a></li></ul></li>
-<li><a href="#events">Events</a></li>
-<li><a href="#contact">Contact</a></li>
+                           <li><a href="index.html">Home</a></li>
+                           <li class="has-dropdown"><a href="about-v2.html">About</a>
+                              <ul class="oit-submenu submenu">
+                                 <li><a href="about-v2.html">About FinExcel</a></li>
+                                 <li><a href="#why">Why FinExcel</a></li>
+                                 <li><a href="#leadership">Leadership</a></li>
+                              </ul>
+                           </li>
+                           <li class="has-dropdown"><a href="#practices">Practices</a>
+                              <ul class="oit-submenu submenu">
+                                 <li><a href="service-details.html">Advisory</a></li>
+                                 <li><a href="service-details.html">Capacity Building</a></li>
+                                 <li><a href="service-details.html">Advocacy</a></li>
+                              </ul>
+                           </li>
+                           <li class="has-dropdown"><a href="blog.html">Insights</a>
+                              <ul class="oit-submenu submenu">
+                                 <li><a href="blog.html">Blog</a></li>
+                                 <li><a href="blog-standard.html">News</a></li>
+                              </ul>
+                           </li>
+                           <li><a href="#events">Events</a></li>
+                           <li><a href="#contact">Contact</a></li>
                         </ul>
                      </nav>
                   </div>
-               </div>
-               <div class="col-xl-3 col-6">
-                  <div class="oit-header-action d-flex align-items-center justify-content-end">
-                     <a class="oit-btn-border btn-black-bg d-inline-flex align-items-center justify-content-between d-none d-md-flex" href="#contact">
+                  <div class="oit-header-action ml-30 d-flex align-items-center">
+                     <a class="oit-btn-border btn-blur-bg d-inline-flex align-items-center justify-content-between d-none d-sm-inline-flex" href="#contact">
    <span>
       <span class="text-1">Talk to us</span>
       <span class="text-2" aria-hidden="true">Talk to us</span>
@@ -127,77 +147,60 @@
 
          <main>
 <!-- hero area start -->
-<section class="dg-hero-area fx-hero fix" aria-label="Introduction">
-   <div class="fx-hero-glow" aria-hidden="true"></div>
-   <img class="fx-hero-mark" src="assets/img/mark-bg.svg" alt="" aria-hidden="true">
+<section class="sd-hero-area sd-hero-bg fx-sd-hero p-relative z-index-1" aria-label="Introduction">
+   <div class="sd-hero-video" aria-hidden="true">
+      <!-- Hero video kept from the Reak index-4 template, as requested. It is hot-linked from the template vendor's server;
+           download it into assets/img/ before launch so the homepage doesn't depend on a third-party host. -->
+      <video autoplay muted loop playsinline preload="metadata">
+         <source src="https://ordainit.com/Video/rek/hero-video.mp4" type="video/mp4">
+      </video>
+   </div>
    <div class="container">
-      <div class="dg-hero-bdr p-relative pt-150 pb-80">
-         <div class="dg-hero-img fade-anim" data-delay=".7" data-on-scroll="2">
-            <!-- Supplied clip: 4.4 s loop, 1280×720. Swap for programme footage when available. -->
-            <video autoplay muted loop playsinline preload="metadata" poster="assets/img/hero-dhaka-poster.jpg" aria-hidden="true">
-               <source src="assets/img/hero-dhaka.mp4" type="video/mp4">
-            </video>
-            <span class="fx-hero-caption">Commercial district, Dhaka</span>
-         </div>
-         <div class="row">
-            <div class="col-xl-12">
-               <div class="dg-hero-title-box mb-50">
-                  <span class="fx-hero-eyebrow fade-anim" data-delay=".2"><i aria-hidden="true"></i>Advisory · Capacity Building · Advocacy</span>
-                  <h1 class="dg-hero-title fade-anim" data-delay=".3">Financial <br>
-                     <img src="assets/img/finexcel/crop/pill-ai-session.jpg" width="600" height="230" alt="">
-                     <span class="fx-accent">Excellence</span>
-                  </h1>
-               </div>
-            </div>
-            <div class="col-xl-5 col-lg-7">
-               <div class="dg-hero-content fade-anim" data-delay=".5" data-on-scroll="2">
-                  <p>
-                     FinExcel strengthens Bangladesh's financial sector through strategic advisory, practitioner-led capacity building and sector advocacy — for banks, NBFIs, corporates and development partners.
-                  </p>
-                  <div class="fx-hero-actions">
-                     <a class="oit-btn-border btn-white-bg d-inline-flex align-items-center justify-content-between " href="#practices">
-   <span>
-      <span class="text-1">Explore our practices</span>
-      <span class="text-2" aria-hidden="true">Explore our practices</span>
-   </span>
-   <i><span><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M11.4801 6.10132e-06L12.4381 0.99062L12.3305 1.09859C9.55759 4.01224 9.66053 7.97757 11.492 9.87138L10.5199 10.8562C9.01152 9.29621 8.47367 6.87412 9.01459 4.46212L0.955362 12.6371L-0.000299374 11.6476L8.06131 3.46911C5.69918 4.00199 3.33666 3.42959 1.82692 1.86845L2.799 0.882416C4.65351 2.80007 8.59851 2.92281 11.4801 6.10132e-06Z" fill="currentcolor" /></svg><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M11.4801 6.10132e-06L12.4381 0.99062L12.3305 1.09859C9.55759 4.01224 9.66053 7.97757 11.492 9.87138L10.5199 10.8562C9.01152 9.29621 8.47367 6.87412 9.01459 4.46212L0.955362 12.6371L-0.000299374 11.6476L8.06131 3.46911C5.69918 4.00199 3.33666 3.42959 1.82692 1.86845L2.799 0.882416C4.65351 2.80007 8.59851 2.92281 11.4801 6.10132e-06Z" fill="currentcolor" /></svg></span></i>
-</a>
-                     <a class="fx-text-link" href="#events">Upcoming programmes</a>
-                  </div>
-                  <ul class="fx-hero-stats">
-                     <li><strong>14+</strong><span>Years in the sector</span></li>
-                     <li><strong>3</strong><span>Connected practices</span></li>
-                     <li><strong>Dhaka</strong><span>Serving the whole sector</span></li>
-                  </ul>
-               </div>
+      <div class="row">
+         <div class="col-xl-12">
+            <div class="sd-hero-title-box text-center">
+               <span class="fx-hero-eyebrow fade-anim" data-delay=".2"><i aria-hidden="true"></i>Advisory · Capacity Building · Advocacy</span>
+               <h1 class="sd-hero-title">Fin<span class="fx-accent">Excel</span></h1>
             </div>
          </div>
+      </div>
+      <div class="row align-items-end">
+         <div class="col-lg-7 col-md-8">
+            <div class="sd-hero-info d-flex align-items-center mb-40">
+               <span class="fx-hero-glyph" aria-hidden="true"><svg class="fx-ribbon" width="52" height="52" aria-hidden="true"><use href="#fx-ribbon"/></svg></span>
+               <span>Strengthening Bangladesh's financial sector — <br class="d-none d-md-inline">for banks, NBFIs, corporates and development partners.</span>
+            </div>
+         </div>
+         <div class="col-lg-5 col-md-4">
+            <div class="sd-hero-info text-start text-md-end mb-40">
+               <a href="mailto:info@finexcelbd.com">info@finexcelbd.com</a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="fx-hero-board">
+      <div class="container d-flex flex-column flex-lg-row align-items-lg-center">
+         <span class="fx-hero-board-label">Our board built their careers at</span>
+         <ul>
+            <li>Citibank N.A.</li><li>Standard Chartered</li><li>ANZ Grindlays</li><li>HBL</li><li>American Express Bank</li><li>Eastern Bank</li><li>PwC Bangladesh</li><li>IBM</li>
+         </ul>
       </div>
    </div>
 </section>
 <!-- hero area end -->
 <!-- about area start -->
-<section id="about" class="oit-about-area dg-about-style fx-about p-relative pt-150 pb-150">
+<section id="about" class="oit-about-area dg-about-style fx-about p-relative pt-120 pb-120" data-bg-color="#f4f9fc">
    <div class="container">
       <div class="row">
          <div class="col-xl-2">
-            <div class="oit-project-subtitle-box mb-30">
+            <div class="oit-section-subtitle-box mb-30">
                <span class="oit-section-subtitle">Who we are</span>
             </div>
          </div>
       </div>
-      <div class="row">
-         <div class="offset-xl-1 col-xl-8">
-            <div class="oit-about-text mb-120">
-               <p class="oit-text-revel">
-                  Built by practitioners, for the institutions they know. Advisory, training and dialogue for Bangladesh's banks and NBFIs.
-               </p>
-            </div>
-         </div>
-      </div>
       <div class="oit-about-content-wrap">
-         <div class="row">
-            <div class="col-xl-4 col-lg-5">
+         <div class="row align-items-center">
+            <div class="col-xl-4 col-lg-6">
                <figure class="mb-0">
                   <div class="oit-about-thumb image-gsl">
                      <div class="image-gsl-canvas"></div>
@@ -206,13 +209,14 @@
                   <figcaption class="fx-figcaption">Mastering Credit Risk Management programme, Dhaka, 2026</figcaption>
                </figure>
             </div>
-            <div class="offset-xl-1 col-xl-7 col-lg-7">
+            <div class="offset-xl-1 col-xl-7">
                <div class="dg-about-content-wrap pt-15">
-                  <div class="oit-about-content mb-90">
+                  <div class="oit-about-text oit-text-revel mb-30">
+                     <p>Built by practitioners, for the institutions they know. Advisory, training and dialogue for Bangladesh's banks and NBFIs.</p>
+                  </div>
+                  <div class="oit-about-content mb-50">
                      <div class="fade-anim" data-delay=".3">
-                        <p>
-                           FinExcel — Financial Excellence Limited — was founded by financial-sector experts and institutions to train, advise and convene Bangladesh's banks and NBFIs. Our programmes are designed and taught by senior bankers, our advice is grounded in evidence, and our roundtables bring leaders, regulators and government bodies to the same table.
-                        </p>
+                        <p>FinExcel — Financial Excellence Limited — was founded by financial-sector experts and institutions to train, advise and convene Bangladesh's banks and NBFIs. Our programmes are designed and taught by senior bankers, our advice is grounded in evidence, and our roundtables bring leaders, regulators and government bodies to the same table.</p>
                      </div>
                      <div class="fade-anim" data-delay=".5">
                         <a class="oit-btn-border btn-black-bg d-inline-flex align-items-center justify-content-between " href="about-v2.html">
@@ -224,18 +228,28 @@
 </a>
                      </div>
                   </div>
-                  <div class="row">
-                     <div class="col-xl-5 col-md-6 col-sm-6">
-                        <div class="oit-funfact-item fade-anim" data-delay=".5">
-                           <h3 class="oit-funfact-title"><i class="purecounter" data-purecounter-duration="1" data-purecounter-end="40">40</i></h3>
-                           <span>Years our chairman has spent in banking</span>
-                        </div>
-                     </div>
-                     <div class="col-xl-5 col-md-6 col-sm-6">
-                        <div class="oit-funfact-item fade-anim" data-delay=".7">
-                           <h3 class="oit-funfact-title"><i class="purecounter" data-purecounter-duration="1" data-purecounter-end="4">4</i></h3>
-                           <span>Institutional partners</span>
-                        </div>
+                  <div class="sd-about-mission-wrap fade-anim" data-delay=".7">
+                     <ul class="nav nav-tab" role="tablist">
+<li class="nav-item" role="presentation">
+   <button class="nav-links active" id="fx-mission-tab" data-bs-toggle="tab" data-bs-target="#fx-mission-pane" type="button" role="tab" aria-controls="fx-mission-pane" aria-selected="true">Our mission</button>
+</li>
+<li class="nav-item" role="presentation">
+   <button class="nav-links" id="fx-approach-tab" data-bs-toggle="tab" data-bs-target="#fx-approach-pane" type="button" role="tab" aria-controls="fx-approach-pane" aria-selected="false">How we work</button>
+</li>
+<li class="nav-item" role="presentation">
+   <button class="nav-links" id="fx-audience-tab" data-bs-toggle="tab" data-bs-target="#fx-audience-pane" type="button" role="tab" aria-controls="fx-audience-pane" aria-selected="false">Who we serve</button>
+</li>
+                     </ul>
+                     <div class="tab-content">
+<div class="tab-pane fade show active" id="fx-mission-pane" role="tabpanel" aria-labelledby="fx-mission-tab" tabindex="0">
+   <p>To train, advise and convene Bangladesh's banks and NBFIs — so decisions are grounded in evidence and teams are equipped to carry them out.</p>
+</div>
+<div class="tab-pane fade" id="fx-approach-pane" role="tabpanel" aria-labelledby="fx-approach-tab" tabindex="0">
+   <p>Programmes are designed and taught by senior bankers and specialists, with cases, regulation and market realities drawn from Bangladesh's own institutions.</p>
+</div>
+<div class="tab-pane fade" id="fx-audience-pane" role="tabpanel" aria-labelledby="fx-audience-tab" tabindex="0">
+   <p>Banks, NBFIs, corporates, development organisations, industry bodies and financial professionals — and international firms looking at the Bangladesh market.</p>
+</div>
                      </div>
                   </div>
                </div>
@@ -246,69 +260,71 @@
 </section>
 <!-- about area end -->
 <!-- practices area start -->
-<section id="practices" class="oit-service-area dg-service-style fx-practices oit-panel-pin-area p-relative pt-120">
+<section id="practices" class="oit-service-area sd-service-style fx-sd-practices oit-panel-pin-area p-relative pt-120 pb-70">
    <div class="container">
 <div class="row">
    <div class="col-xl-2">
-      <div class="oit-section-subtitle-box mb-30 ">
-         <span class="oit-section-subtitle oit-text-white">Practices</span>
+      <div class="oit-section-subtitle-box mb-50 text-center text-lg-start">
+         <span class="oit-section-subtitle ">Practices</span>
       </div>
    </div>
 </div>
 <div class="row">
    <div class="offset-xl-1 col-xl-10">
-      <div class="oit-section-title-box pl-70 mb-120 ">
-         <h2 class="oit-section-title oit-title-revel">Three practices, <br><span class="pl-265 fx-accent">one purpose</span></h2>
+      <div class="oit-section-title-box pl-70 mb-120 text-center text-lg-start">
+         <h2 class="oit-section-title oit-title-revel">Three practices, <br><span class="pl-265"><span class="fx-accent">one purpose</span></span></h2>
       </div>
    </div>
 </div>
       <div class="row justify-content-center">
          <div class="col-xxl-10">
-<div class="oit-service-item oit-panel-pin d-flex align-items-center mb-50" data-start="top 20%" data-bg-color="#0b1f3a">
+<div class="oit-service-item oit-panel-pin d-flex align-items-center mb-50" data-bg-color="#e8f4fb" data-start="top 20%">
    <div class="oit-service-content-wrap">
-      <span class="fx-practice-no">01 — Decisions grounded in evidence</span>
+      <span class="fx-practice-no">01 — Test the decision</span>
       <h3 class="oit-service-title"><a class="border-line" href="service-details.html">Advisory</a></h3>
       <div class="oit-service-content">
          <p>Feasibility studies, business plans and data-driven risk insight for institutions planning their next move — including international companies entering Bangladesh and Bangladeshi firms expanding abroad.</p>
-         <div class="row row-cols-xl-2 row-cols-lg-1 row-cols-md-2 row-cols-sm-2 row-cols-1">
-<div class="col"><div class="oit-service-category"><span class="d-flex align-items-center"><svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10 0C9.554 11.0256 9.187 11.4648 0 12C9.188 12.5352 9.554 12.9756 10 24C10.446 12.9744 10.813 12.5352 20 12C10.812 11.4648 10.446 11.0244 10 0Z" fill="currentcolor" /></svg> Feasibility studies & business plans</span></div></div>
-<div class="col"><div class="oit-service-category"><span class="d-flex align-items-center"><svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10 0C9.554 11.0256 9.187 11.4648 0 12C9.188 12.5352 9.554 12.9756 10 24C10.446 12.9744 10.813 12.5352 20 12C10.812 11.4648 10.446 11.0244 10 0Z" fill="currentcolor" /></svg> Risk advisory & data insight</span></div></div>
-<div class="col"><div class="oit-service-category"><span class="d-flex align-items-center"><svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10 0C9.554 11.0256 9.187 11.4648 0 12C9.188 12.5352 9.554 12.9756 10 24C10.446 12.9744 10.813 12.5352 20 12C10.812 11.4648 10.446 11.0244 10 0Z" fill="currentcolor" /></svg> Market entry for international firms</span></div></div>
-<div class="col"><div class="oit-service-category"><span class="d-flex align-items-center"><svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10 0C9.554 11.0256 9.187 11.4648 0 12C9.188 12.5352 9.554 12.9756 10 24C10.446 12.9744 10.813 12.5352 20 12C10.812 11.4648 10.446 11.0244 10 0Z" fill="currentcolor" /></svg> Expansion beyond Bangladesh</span></div></div>
+         <div class="row row-cols-sm-2 row-cols-1">
+<div class="col"><div class="oit-service-category"><span class="d-flex align-items-center"><svg class="fx-ribbon" width="20" height="20" aria-hidden="true"><use href="#fx-ribbon"/></svg> Feasibility studies &amp; business plans</span></div></div>
+<div class="col"><div class="oit-service-category"><span class="d-flex align-items-center"><svg class="fx-ribbon" width="20" height="20" aria-hidden="true"><use href="#fx-ribbon"/></svg> Risk advisory &amp; data insight</span></div></div>
+<div class="col"><div class="oit-service-category"><span class="d-flex align-items-center"><svg class="fx-ribbon" width="20" height="20" aria-hidden="true"><use href="#fx-ribbon"/></svg> Market entry for international firms</span></div></div>
+<div class="col"><div class="oit-service-category"><span class="d-flex align-items-center"><svg class="fx-ribbon" width="20" height="20" aria-hidden="true"><use href="#fx-ribbon"/></svg> Expansion beyond Bangladesh</span></div></div>
          </div>
       </div>
    </div>
    <div class="oit-service-thumb">
       <img src="assets/img/finexcel/crop/service-advisory.jpg" width="430" height="391" alt="Credit professionals in discussion during FinExcel&#x27;s Corporate Credit Risk Analysis programme">
    </div>
-</div><div class="oit-service-item oit-panel-pin d-flex align-items-center mb-50" data-start="top 20%" data-bg-color="#0b1f3a">
+</div>
+<div class="oit-service-item oit-panel-pin d-flex align-items-center mb-50" data-bg-color="#ffffff" data-start="top 20%">
    <div class="oit-service-content-wrap">
-      <span class="fx-practice-no">02 — Capability built by practitioners</span>
+      <span class="fx-practice-no">02 — Build the team</span>
       <h3 class="oit-service-title"><a class="border-line" href="service-details.html">Capacity Building</a></h3>
       <div class="oit-service-content">
          <p>Programmes designed and taught by senior bankers for the people who run Bangladesh's banks and NBFIs — from credit risk and loan recovery to AI, cyber resilience and leadership.</p>
-         <div class="row row-cols-xl-2 row-cols-lg-1 row-cols-md-2 row-cols-sm-2 row-cols-1">
-<div class="col"><div class="oit-service-category"><span class="d-flex align-items-center"><svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10 0C9.554 11.0256 9.187 11.4648 0 12C9.188 12.5352 9.554 12.9756 10 24C10.446 12.9744 10.813 12.5352 20 12C10.812 11.4648 10.446 11.0244 10 0Z" fill="currentcolor" /></svg> Credit risk & NPL management</span></div></div>
-<div class="col"><div class="oit-service-category"><span class="d-flex align-items-center"><svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10 0C9.554 11.0256 9.187 11.4648 0 12C9.188 12.5352 9.554 12.9756 10 24C10.446 12.9744 10.813 12.5352 20 12C10.812 11.4648 10.446 11.0244 10 0Z" fill="currentcolor" /></svg> AI, cyber security & fraud</span></div></div>
-<div class="col"><div class="oit-service-category"><span class="d-flex align-items-center"><svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10 0C9.554 11.0256 9.187 11.4648 0 12C9.188 12.5352 9.554 12.9756 10 24C10.446 12.9744 10.813 12.5352 20 12C10.812 11.4648 10.446 11.0244 10 0Z" fill="currentcolor" /></svg> Transaction & retail banking</span></div></div>
-<div class="col"><div class="oit-service-category"><span class="d-flex align-items-center"><svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10 0C9.554 11.0256 9.187 11.4648 0 12C9.188 12.5352 9.554 12.9756 10 24C10.446 12.9744 10.813 12.5352 20 12C10.812 11.4648 10.446 11.0244 10 0Z" fill="currentcolor" /></svg> Leadership & negotiation</span></div></div>
+         <div class="row row-cols-sm-2 row-cols-1">
+<div class="col"><div class="oit-service-category"><span class="d-flex align-items-center"><svg class="fx-ribbon" width="20" height="20" aria-hidden="true"><use href="#fx-ribbon"/></svg> Credit risk &amp; NPL management</span></div></div>
+<div class="col"><div class="oit-service-category"><span class="d-flex align-items-center"><svg class="fx-ribbon" width="20" height="20" aria-hidden="true"><use href="#fx-ribbon"/></svg> AI, cyber security &amp; fraud</span></div></div>
+<div class="col"><div class="oit-service-category"><span class="d-flex align-items-center"><svg class="fx-ribbon" width="20" height="20" aria-hidden="true"><use href="#fx-ribbon"/></svg> Transaction &amp; retail banking</span></div></div>
+<div class="col"><div class="oit-service-category"><span class="d-flex align-items-center"><svg class="fx-ribbon" width="20" height="20" aria-hidden="true"><use href="#fx-ribbon"/></svg> Leadership &amp; negotiation</span></div></div>
          </div>
       </div>
    </div>
    <div class="oit-service-thumb">
       <img src="assets/img/finexcel/crop/service-capacity.jpg" width="430" height="391" alt="Participants from a bank&#x27;s recovery team at a FinExcel negotiation programme in Dhaka">
    </div>
-</div><div class="oit-service-item oit-panel-pin d-flex align-items-center mb-50" data-start="top 20%" data-bg-color="#0b1f3a">
+</div>
+<div class="oit-service-item oit-panel-pin d-flex align-items-center mb-50" data-bg-color="#d6ecf8" data-start="top 20%">
    <div class="oit-service-content-wrap">
-      <span class="fx-practice-no">03 — Dialogue that moves the sector</span>
+      <span class="fx-practice-no">03 — Move the sector</span>
       <h3 class="oit-service-title"><a class="border-line" href="service-details.html">Advocacy</a></h3>
       <div class="oit-service-content">
          <p>Seminars, symposiums and roundtables that bring financial leaders, regulators and government bodies to the same table — including dialogue on support for SMEs and women entrepreneurs.</p>
-         <div class="row row-cols-xl-2 row-cols-lg-1 row-cols-md-2 row-cols-sm-2 row-cols-1">
-<div class="col"><div class="oit-service-category"><span class="d-flex align-items-center"><svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10 0C9.554 11.0256 9.187 11.4648 0 12C9.188 12.5352 9.554 12.9756 10 24C10.446 12.9744 10.813 12.5352 20 12C10.812 11.4648 10.446 11.0244 10 0Z" fill="currentcolor" /></svg> Leadership roundtables</span></div></div>
-<div class="col"><div class="oit-service-category"><span class="d-flex align-items-center"><svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10 0C9.554 11.0256 9.187 11.4648 0 12C9.188 12.5352 9.554 12.9756 10 24C10.446 12.9744 10.813 12.5352 20 12C10.812 11.4648 10.446 11.0244 10 0Z" fill="currentcolor" /></svg> Seminars & symposiums</span></div></div>
-<div class="col"><div class="oit-service-category"><span class="d-flex align-items-center"><svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10 0C9.554 11.0256 9.187 11.4648 0 12C9.188 12.5352 9.554 12.9756 10 24C10.446 12.9744 10.813 12.5352 20 12C10.812 11.4648 10.446 11.0244 10 0Z" fill="currentcolor" /></svg> Policy dialogue</span></div></div>
-<div class="col"><div class="oit-service-category"><span class="d-flex align-items-center"><svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10 0C9.554 11.0256 9.187 11.4648 0 12C9.188 12.5352 9.554 12.9756 10 24C10.446 12.9744 10.813 12.5352 20 12C10.812 11.4648 10.446 11.0244 10 0Z" fill="currentcolor" /></svg> SME & women-entrepreneur agenda</span></div></div>
+         <div class="row row-cols-sm-2 row-cols-1">
+<div class="col"><div class="oit-service-category"><span class="d-flex align-items-center"><svg class="fx-ribbon" width="20" height="20" aria-hidden="true"><use href="#fx-ribbon"/></svg> Leadership roundtables</span></div></div>
+<div class="col"><div class="oit-service-category"><span class="d-flex align-items-center"><svg class="fx-ribbon" width="20" height="20" aria-hidden="true"><use href="#fx-ribbon"/></svg> Seminars &amp; symposiums</span></div></div>
+<div class="col"><div class="oit-service-category"><span class="d-flex align-items-center"><svg class="fx-ribbon" width="20" height="20" aria-hidden="true"><use href="#fx-ribbon"/></svg> Policy dialogue</span></div></div>
+<div class="col"><div class="oit-service-category"><span class="d-flex align-items-center"><svg class="fx-ribbon" width="20" height="20" aria-hidden="true"><use href="#fx-ribbon"/></svg> SME &amp; women-entrepreneur agenda</span></div></div>
          </div>
       </div>
    </div>
@@ -321,64 +337,13 @@
    </div>
 </section>
 <!-- practices area end -->
-<!-- why area start -->
-<section id="why" class="dg-step-area fx-steps pt-80 pb-85" data-bg-color="#f4f9fc">
-   <div class="container">
-<div class="row">
-   <div class="col-xl-2">
-      <div class="oit-section-subtitle-box mb-30 text-center text-lg-start">
-         <span class="oit-section-subtitle">Why FinExcel</span>
-      </div>
-   </div>
-</div>
-<div class="row">
-   <div class="offset-xl-1 col-xl-10">
-      <div class="oit-section-title-box pl-70 mb-75 text-center text-lg-start">
-         <h2 class="oit-section-title oit-title-revel">Why institutions <br><span class="pl-265">choose FinExcel</span></h2>
-      </div>
-   </div>
-</div>
-      <div class="row">
-<div class="col-xxl-3 col-xl-4 col-md-6">
-   <div class="dg-step-item p-relative mb-35 fade-anim" data-delay=".3">
-      <div class="dg-step-big-text" aria-hidden="true">01</div>
-      <span>Reason — 01</span>
-      <h3 class="dg-step-title">Senior practitioners</h3>
-      <p>Programmes are designed and taught by senior bankers and specialists — not generalist trainers.</p>
-   </div>
-</div><div class="col-xxl-3 col-xl-4 col-md-6">
-   <div class="dg-step-item p-relative mb-35 fade-anim" data-delay=".5">
-      <div class="dg-step-big-text" aria-hidden="true">02</div>
-      <span>Reason — 02</span>
-      <h3 class="dg-step-title">Built for Bangladesh</h3>
-      <p>Cases, regulation and market realities drawn from Bangladesh's own banks and NBFIs.</p>
-   </div>
-</div><div class="col-xxl-3 col-xl-4 col-md-6">
-   <div class="dg-step-item p-relative mb-35 fade-anim" data-delay=".7">
-      <div class="dg-step-big-text" aria-hidden="true">03</div>
-      <span>Reason — 03</span>
-      <h3 class="dg-step-title">One firm, three levers</h3>
-      <p>Test a decision, build the team to carry it out, and take the conversation to the wider sector.</p>
-   </div>
-</div><div class="col-xxl-3 col-xl-4 col-md-6">
-   <div class="dg-step-item p-relative mb-35 fade-anim" data-delay=".9">
-      <div class="dg-step-big-text" aria-hidden="true">04</div>
-      <span>Reason — 04</span>
-      <h3 class="dg-step-title">Shaped with partners</h3>
-      <p>FinExcel was founded by experts and institutions together — and partnership is still how we work.</p>
-   </div>
-</div>
-      </div>
-   </div>
-</section>
-<!-- why area end -->
 <!-- work area start -->
-<section id="work" class="oit-project-area dg-project-style fx-work p-relative pt-120 pb-190 fix">
+<section id="work" class="sd-project-area dg-project-style fx-sd-work p-relative pt-120 pb-60 fix" data-bg-color="#f4f9fc">
    <div class="container">
 <div class="row">
    <div class="col-xl-2">
-      <div class="oit-section-subtitle-box mb-30 text-center text-lg-start">
-         <span class="oit-section-subtitle">Selected work</span>
+      <div class="oit-section-subtitle-box mb-50 text-center text-lg-start">
+         <span class="oit-section-subtitle ">Selected work</span>
       </div>
    </div>
 </div>
@@ -390,340 +355,208 @@
    </div>
 </div>
       <div class="row">
-<div class="col-xl-12">
-   <div class="oit-project-item mb-30">
-      <div class="oit-project-thumb image-gsl">
-         <a href="project-details-v1.html">
+<div class="col-xl-3 col-md-6">
+   <div class="st-project-item fx-work-card p-relative mb-30">
+      <a href="project-details-v1.html" tabindex="-1" aria-hidden="true">
+         <div class="st-project-thumb image-gsl">
             <div class="image-gsl-canvas"></div>
-            <img class="w-100" src="assets/img/finexcel/crop/work-city-bank.jpg" alt="A speaker addresses participants at FinExcel&#x27;s Negotiation Mastery programme for City Bank PLC">
-         </a>
-      </div>
-      <div class="oit-project-content">
-         <h3 class="oit-project-title mb-0"><a class="border-line" href="project-details-v1.html">Negotiation Mastery for City Bank PLC</a></h3>
-         <div class="oit-project-category"><span>Recovery & Collection · In-house · 2026</span></div>
-      </div>
-   </div>
-</div><div class="col-xl-6">
-   <div class="oit-project-item mb-30">
-      <div class="oit-project-thumb image-gsl">
-         <a href="project-details-v1.html">
-            <div class="image-gsl-canvas"></div>
-            <img class="w-100" src="assets/img/finexcel/crop/work-ai.jpg" alt="A facilitator leads a discussion with bankers seated at round tables">
-         </a>
-      </div>
-      <div class="oit-project-content">
-         <h3 class="oit-project-title mb-0"><a class="border-line" href="project-details-v1.html">AI in Banking & NBFIs</a></h3>
-         <div class="oit-project-category"><span>Capacity Building · 2026</span></div>
-      </div>
-   </div>
-</div><div class="col-xl-6">
-   <div class="oit-project-item mb-30">
-      <div class="oit-project-thumb image-gsl">
-         <a href="project-details-v1.html">
-            <div class="image-gsl-canvas"></div>
-            <img class="w-100" src="assets/img/finexcel/crop/work-transaction.jpg" alt="A training room during FinExcel&#x27;s Transaction Banking programme">
-         </a>
-      </div>
-      <div class="oit-project-content">
-         <h3 class="oit-project-title mb-0"><a class="border-line" href="project-details-v1.html">Transaction Banking, Payments & Liquidity</a></h3>
-         <div class="oit-project-category"><span>Capacity Building · 2026</span></div>
-      </div>
-   </div>
-</div><div class="col-xl-12">
-   <div class="oit-project-item mb-30">
-      <div class="oit-project-thumb image-gsl">
-         <a href="project-details-v1.html">
-            <div class="image-gsl-canvas"></div>
-            <img class="w-100" src="assets/img/finexcel/crop/work-leadership.jpg" alt="Group photograph from FinExcel&#x27;s Strategic Leadership &amp; Change Management programme">
-         </a>
-      </div>
-      <div class="oit-project-content">
-         <h3 class="oit-project-title mb-0"><a class="border-line" href="project-details-v1.html">Strategic Leadership & Change Management</a></h3>
-         <div class="oit-project-category"><span>Banks & NBFIs · 2026</span></div>
+            <img class="w-100" src="assets/img/finexcel/negotiation-podium.jpg" style="object-position: 28% 50%" loading="lazy" alt="A speaker addresses participants at FinExcel&#x27;s Negotiation Mastery programme for City Bank PLC">
+         </div>
+      </a>
+      <div class="fx-work-body">
+         <div class="fx-work-meta"><span>2026</span><span>Recovery &amp; Collection</span><span>In-house</span></div>
+         <h3 class="fx-work-title"><a class="border-line" href="project-details-v1.html">Negotiation Mastery for City Bank PLC</a></h3>
       </div>
    </div>
 </div>
-         <div class="col-xl-12">
-            <div class="oit-project-btn text-center mt-100">
-               <a class="oit-btn-border btn-black-bg d-inline-flex align-items-center justify-content-between " href="project-v1.html">
+<div class="col-xl-3 col-md-6">
+   <div class="st-project-item fx-work-card p-relative mb-30">
+      <a href="project-details-v1.html" tabindex="-1" aria-hidden="true">
+         <div class="st-project-thumb image-gsl">
+            <div class="image-gsl-canvas"></div>
+            <img class="w-100" src="assets/img/finexcel/corporate-credit.jpg" style="object-position: 50% 60%" loading="lazy" alt="Credit professionals in discussion during FinExcel&#x27;s Corporate Credit Risk Analysis programme">
+         </div>
+      </a>
+      <div class="fx-work-body">
+         <div class="fx-work-meta"><span>2026</span><span>Capacity Building</span><span>Open programme</span></div>
+         <h3 class="fx-work-title"><a class="border-line" href="project-details-v1.html">Corporate Credit Risk Analysis</a></h3>
+      </div>
+   </div>
+</div>
+<div class="col-xl-3 col-md-6">
+   <div class="st-project-item fx-work-card p-relative mb-30">
+      <a href="project-details-v1.html" tabindex="-1" aria-hidden="true">
+         <div class="st-project-thumb image-gsl">
+            <div class="image-gsl-canvas"></div>
+            <img class="w-100" src="assets/img/finexcel/transaction-banking.jpg" style="object-position: 50% 65%" loading="lazy" alt="Participants at round tables during FinExcel&#x27;s Transaction Banking programme">
+         </div>
+      </a>
+      <div class="fx-work-body">
+         <div class="fx-work-meta"><span>2026</span><span>Capacity Building</span><span>Open programme</span></div>
+         <h3 class="fx-work-title"><a class="border-line" href="project-details-v1.html">Transaction Banking, Payments &amp; Liquidity</a></h3>
+      </div>
+   </div>
+</div>
+<div class="col-xl-3 col-md-6">
+   <div class="st-project-item fx-work-card p-relative mb-30">
+      <a href="project-details-v1.html" tabindex="-1" aria-hidden="true">
+         <div class="st-project-thumb image-gsl">
+            <div class="image-gsl-canvas"></div>
+            <img class="w-100" src="assets/img/finexcel/group-leadership.jpg" style="object-position: 50% 55%" loading="lazy" alt="Group photograph from FinExcel&#x27;s Strategic Leadership &amp; Change Management programme">
+         </div>
+      </a>
+      <div class="fx-work-body">
+         <div class="fx-work-meta"><span>2026</span><span>Banks &amp; NBFIs</span><span>Leadership</span></div>
+         <h3 class="fx-work-title"><a class="border-line" href="project-details-v1.html">Strategic Leadership &amp; Change Management</a></h3>
+      </div>
+   </div>
+</div>
+      </div>
+      <div class="row">
+         <div class="st-project-btn text-center mt-90 fade-anim" data-delay=".5">
+            <a class="oit-btn-border btn-black-bg d-inline-flex align-items-center justify-content-between " href="project-v1.html">
    <span>
       <span class="text-1">View all programmes</span>
       <span class="text-2" aria-hidden="true">View all programmes</span>
    </span>
    <i><span><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M11.4801 6.10132e-06L12.4381 0.99062L12.3305 1.09859C9.55759 4.01224 9.66053 7.97757 11.492 9.87138L10.5199 10.8562C9.01152 9.29621 8.47367 6.87412 9.01459 4.46212L0.955362 12.6371L-0.000299374 11.6476L8.06131 3.46911C5.69918 4.00199 3.33666 3.42959 1.82692 1.86845L2.799 0.882416C4.65351 2.80007 8.59851 2.92281 11.4801 6.10132e-06Z" fill="currentcolor" /></svg><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M11.4801 6.10132e-06L12.4381 0.99062L12.3305 1.09859C9.55759 4.01224 9.66053 7.97757 11.492 9.87138L10.5199 10.8562C9.01152 9.29621 8.47367 6.87412 9.01459 4.46212L0.955362 12.6371L-0.000299374 11.6476L8.06131 3.46911C5.69918 4.00199 3.33666 3.42959 1.82692 1.86845L2.799 0.882416C4.65351 2.80007 8.59851 2.92281 11.4801 6.10132e-06Z" fill="currentcolor" /></svg></span></i>
 </a>
-            </div>
          </div>
       </div>
    </div>
 </section>
 <!-- work area end -->
-<!-- leadership area start -->
-<section id="leadership" class="dg-team-area fx-leaders p-relative pt-130 pb-150" data-bg-color="#f4f9fc">
-   <div class="container">
-<div class="row">
-   <div class="col-xl-2">
-      <div class="oit-section-subtitle-box mb-30 text-center text-lg-start">
-         <span class="oit-section-subtitle">Leadership</span>
-      </div>
-   </div>
-</div>
-<div class="row">
-   <div class="offset-xl-1 col-xl-10">
-      <div class="oit-section-title-box pl-70 mb-75 text-center text-lg-start">
-         <h2 class="oit-section-title oit-title-revel">Led by people who <br><span class="pl-265">built the sector</span></h2>
-      </div>
-   </div>
-</div>
-      <div class="row gx-25">
-<div class="col-xxl-3 col-xl-4 col-md-6">
-   <div class="dg-team-item mb-35 fade-anim" data-delay=".3">
-      <a href="team-details.html" tabindex="-1" aria-hidden="true">
-         <div class="dg-team-thumb image-gsl border-radius-10 mb-30">
-            <div class="image-gsl-canvas"></div>
-            <img class="border-radius-10 w-100" src="assets/img/finexcel/team/selim-barkat-card.jpg" width="412" height="500" alt="Portrait of Selim Barkat, Chairman of FinExcel">
-         </div>
-      </a>
-      <div class="dg-team-author-wrap d-flex justify-content-between">
-         <div class="dg-team-author-info">
-            <h3 class="dg-team-title"><a class="border-line" href="team-details.html">Selim Barkat</a></h3>
-            <span>Chairman</span>
-            <p>Four decades in banking across Bangladesh and the US, including 30 years with Citibank N.A.</p>
-         </div>
-      </div>
-   </div>
-</div><div class="col-xxl-3 col-xl-4 col-md-6">
-   <div class="dg-team-item mb-35 fade-anim" data-delay=".5">
-      <a href="team-details.html" tabindex="-1" aria-hidden="true">
-         <div class="dg-team-thumb image-gsl border-radius-10 mb-30">
-            <div class="image-gsl-canvas"></div>
-            <img class="border-radius-10 w-100" src="assets/img/finexcel/team/nilufar-rahman-card.jpg" width="412" height="500" alt="Portrait of Nilufar Rahman, Chief Executive Officer of FinExcel">
-         </div>
-      </a>
-      <div class="dg-team-author-wrap d-flex justify-content-between">
-         <div class="dg-team-author-info">
-            <h3 class="dg-team-title"><a class="border-line" href="team-details.html">Nilufar Rahman</a></h3>
-            <span>Chief Executive Officer</span>
-            <p>Over 20 years with American Express Bank, Citibank, DHL and Eastern Bank.</p>
-         </div>
-      </div>
-   </div>
-</div><div class="col-xxl-3 col-xl-4 col-md-6">
-   <div class="dg-team-item mb-35 fade-anim" data-delay=".7">
-      <a href="team-details.html" tabindex="-1" aria-hidden="true">
-         <div class="dg-team-thumb image-gsl border-radius-10 mb-30">
-            <div class="image-gsl-canvas"></div>
-            <img class="border-radius-10 w-100" src="assets/img/finexcel/team/nasir-uddin-chowdhury-card.jpg" width="412" height="500" alt="Portrait of Mohammed Nasir Uddin Chowdhury, Vice Chairman of FinExcel">
-         </div>
-      </a>
-      <div class="dg-team-author-wrap d-flex justify-content-between">
-         <div class="dg-team-author-info">
-            <h3 class="dg-team-title"><a class="border-line" href="team-details.html">Mohammed Nasir Uddin Chowdhury</a></h3>
-            <span>Vice Chairman</span>
-            <p>Managing Director of LankaBangla Securities and Chairman of BD Venture Ltd.</p>
-         </div>
-      </div>
-   </div>
-</div><div class="col-xxl-3 col-xl-4 col-md-6">
-   <div class="dg-team-item mb-35 fade-anim" data-delay=".9">
-      <a href="team-details.html" tabindex="-1" aria-hidden="true">
-         <div class="dg-team-thumb image-gsl border-radius-10 mb-30">
-            <div class="image-gsl-canvas"></div>
-            <img class="border-radius-10 w-100" src="assets/img/finexcel/team/mamun-rashid-card.jpg" width="412" height="500" alt="Portrait of Mamun Rashid, Director of FinExcel">
-         </div>
-      </a>
-      <div class="dg-team-author-wrap d-flex justify-content-between">
-         <div class="dg-team-author-info">
-            <h3 class="dg-team-title"><a class="border-line" href="team-details.html">Mamun Rashid</a></h3>
-            <span>Director</span>
-            <p>Former Managing Partner of PwC Bangladesh.</p>
-         </div>
-      </div>
-   </div>
-</div>
-      </div>
-      <div class="fx-board-ex fade-anim" data-delay=".3">
-         <span>Where our board built their careers</span>
-         <span>Citibank N.A.</span><span>Standard Chartered</span><span>ANZ Grindlays</span><span>HBL</span><span>American Express Bank</span><span>Eastern Bank</span><span>PwC Bangladesh</span><span>IBM</span>
-      </div>
-      <div class="row">
-         <div class="col-12">
-            <div class="dg-team-btn text-center pt-65 fade-anim" data-delay=".5">
-               <a class="oit-btn-border btn-black-bg d-inline-flex align-items-center justify-content-between " href="team.html">
-   <span>
-      <span class="text-1">Meet the full board</span>
-      <span class="text-2" aria-hidden="true">Meet the full board</span>
-   </span>
-   <i><span><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M11.4801 6.10132e-06L12.4381 0.99062L12.3305 1.09859C9.55759 4.01224 9.66053 7.97757 11.492 9.87138L10.5199 10.8562C9.01152 9.29621 8.47367 6.87412 9.01459 4.46212L0.955362 12.6371L-0.000299374 11.6476L8.06131 3.46911C5.69918 4.00199 3.33666 3.42959 1.82692 1.86845L2.799 0.882416C4.65351 2.80007 8.59851 2.92281 11.4801 6.10132e-06Z" fill="currentcolor" /></svg><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M11.4801 6.10132e-06L12.4381 0.99062L12.3305 1.09859C9.55759 4.01224 9.66053 7.97757 11.492 9.87138L10.5199 10.8562C9.01152 9.29621 8.47367 6.87412 9.01459 4.46212L0.955362 12.6371L-0.000299374 11.6476L8.06131 3.46911C5.69918 4.00199 3.33666 3.42959 1.82692 1.86845L2.799 0.882416C4.65351 2.80007 8.59851 2.92281 11.4801 6.10132e-06Z" fill="currentcolor" /></svg></span></i>
-</a>
-            </div>
-         </div>
-      </div>
-   </div>
-</section>
-<!-- leadership area end -->
-<!-- partnership bento start -->
-<section id="partnership" class="oit-bin-to-card-area fx-why pt-150 pb-120">
-   <div class="container">
-<div class="row">
-   <div class="col-xl-2">
-      <div class="oit-section-subtitle-box mb-30 text-center text-lg-start">
-         <span class="oit-section-subtitle">Partnership</span>
-      </div>
-   </div>
-</div>
-<div class="row">
-   <div class="offset-xl-1 col-xl-10">
-      <div class="oit-section-title-box pl-70 mb-75 text-center text-lg-start">
-         <h2 class="oit-section-title oit-title-revel">Progress is made <br><span class="pl-265">together</span></h2>
-      </div>
-   </div>
-</div>
-      <div class="row grid gx-30">
-         <div class="col-xxl-4 col-lg-6 grid-item">
-            <div class="oit-bin-to-card-item grey-bg card-1 mb-30">
-               <h3 class="oit-bin-to-card-title">Who we work with</h3>
-               <span>Institutions across Bangladesh's financial system — and the people who lead them.</span>
-               <div class="fx-chips"><span>Banks</span><span>NBFIs</span><span>Corporates</span><span>Development organisations</span><span>Industry bodies</span><span>Financial professionals</span></div>
-               <div class="fx-why-photo">
-                  <img src="assets/img/finexcel/group-npl.jpg" alt="Participants at FinExcel's Smart Loan Recovery &amp; NPL Management programme">
-               </div>
-            </div>
-         </div>
-         <div class="col-xxl-4 col-lg-6 grid-item">
-            <div class="oit-bin-to-card-item grey-bg card-1 mb-30">
-               <span class="fx-big-stat">14+</span>
-               <h3 class="oit-bin-to-card-title mt-20">Years in the sector</h3>
-               <span>Founded by financial-sector experts and institutions, FinExcel has spent more than a decade strengthening Bangladesh's banks and NBFIs.</span>
-               <div class="fx-why-photo">
-                  <img src="assets/img/finexcel/retail-room.jpg" alt="Bankers in session at FinExcel's Retail Banking &amp; Wealth Management Excellence programme">
-               </div>
-            </div>
-         </div>
-         <div class="col-xxl-4 col-xl-6 grid-item">
-            <div class="oit-bin-to-card-item card-2 item-style-3 black-bg mb-30">
-               <h3 class="oit-bin-to-card-big-title mb-25">Partner with FinExcel</h3>
-               <div class="oit-bin-to-card-list mb-40">
-                  <ul>
-<li><span><svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10 0C9.554 11.0256 9.187 11.4648 0 12C9.188 12.5352 9.554 12.9756 10 24C10.446 12.9744 10.813 12.5352 20 12C10.812 11.4648 10.446 11.0244 10 0Z" fill="#5fbde6" /></svg> Co-host a programme</span></li>
-<li><span><svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10 0C9.554 11.0256 9.187 11.4648 0 12C9.188 12.5352 9.554 12.9756 10 24C10.446 12.9744 10.813 12.5352 20 12C10.812 11.4648 10.446 11.0244 10 0Z" fill="#5fbde6" /></svg> Commission in-house training</span></li>
-<li><span><svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10 0C9.554 11.0256 9.187 11.4648 0 12C9.188 12.5352 9.554 12.9756 10 24C10.446 12.9744 10.813 12.5352 20 12C10.812 11.4648 10.446 11.0244 10 0Z" fill="#5fbde6" /></svg> Sponsor a sector roundtable</span></li>
-<li><span><svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10 0C9.554 11.0256 9.187 11.4648 0 12C9.188 12.5352 9.554 12.9756 10 24C10.446 12.9744 10.813 12.5352 20 12C10.812 11.4648 10.446 11.0244 10 0Z" fill="#5fbde6" /></svg> Collaborate on research</span></li>
-                  </ul>
-               </div>
-               <a class="oit-btn-border btn-white-bg d-inline-flex align-items-center justify-content-between " href="#contact">
-   <span>
-      <span class="text-1">Explore partnerships</span>
-      <span class="text-2" aria-hidden="true">Explore partnerships</span>
-   </span>
-   <i><span><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M11.4801 6.10132e-06L12.4381 0.99062L12.3305 1.09859C9.55759 4.01224 9.66053 7.97757 11.492 9.87138L10.5199 10.8562C9.01152 9.29621 8.47367 6.87412 9.01459 4.46212L0.955362 12.6371L-0.000299374 11.6476L8.06131 3.46911C5.69918 4.00199 3.33666 3.42959 1.82692 1.86845L2.799 0.882416C4.65351 2.80007 8.59851 2.92281 11.4801 6.10132e-06Z" fill="currentcolor" /></svg><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M11.4801 6.10132e-06L12.4381 0.99062L12.3305 1.09859C9.55759 4.01224 9.66053 7.97757 11.492 9.87138L10.5199 10.8562C9.01152 9.29621 8.47367 6.87412 9.01459 4.46212L0.955362 12.6371L-0.000299374 11.6476L8.06131 3.46911C5.69918 4.00199 3.33666 3.42959 1.82692 1.86845L2.799 0.882416C4.65351 2.80007 8.59851 2.92281 11.4801 6.10132e-06Z" fill="currentcolor" /></svg></span></i>
-</a>
-               <p class="mb-0 mt-40">Partners include Agrani Bank, Green Delta Insurance, LankaBangla Securities and DataEdge.</p>
-               <img class="fx-mark" src="assets/img/mark-bg.svg" alt="">
-            </div>
-         </div>
-         <div class="col-xxl-12 grid-item">
-            <div class="row">
-               <div class="col-xl-4 col-lg-6 mb-30">
-                  <div class="oit-bin-to-card-item card-3 grey-bg">
-                     <h3 class="oit-bin-to-card-title">In-house programmes</h3>
-                     <span>Built around a single institution's cases, teams and targets.</span>
-                  </div>
-               </div>
-               <div class="col-xl-4 col-lg-6 mb-30">
-                  <div class="oit-bin-to-card-item card-3 text-center item-overlay" data-background="assets/img/finexcel/cyber.jpg">
-                     <h3 class="oit-bin-to-card-title text-white">Based in Dhaka, <br>working sector-wide</h3>
-                  </div>
-               </div>
-               <div class="col-xl-4 col-lg-12 mb-30">
-                  <div class="oit-bin-to-card-item card-3 grey-bg">
-                     <h3 class="oit-bin-to-card-title">Roundtables &amp; dialogue</h3>
-                     <span>Leaders, regulators and government bodies at one table — on NPLs, governance and SME finance.</span>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</section>
-<!-- partnership bento end -->
-<!-- events area start -->
-<!-- STAKEHOLDER: sample dates until the programme calendar is supplied. -->
-<section id="events" class="dg-funfact-area dg-funfact-style fx-events pt-120 pb-100" data-bg-color="#f4f9fc">
+<!-- numbers area start -->
+<section class="sd-funfact-area fx-sd-numbers p-relative pt-60 pb-70" data-bg-color="#f4f9fc" aria-label="FinExcel in numbers">
+   <img class="fx-numbers-mark d-none d-xl-block" src="assets/img/mark-bg.svg" alt="" aria-hidden="true">
    <div class="container">
       <div class="row">
-         <div class="col-xl-5">
-            <div class="oit-section-title-box">
-               <span class="oit-section-subtitle mb-10">Events</span>
-               <h2 class="oit-section-title oit-title-revel fsz-120 mb-25">Upcoming programmes</h2>
-               <div class="fade-anim" data-delay=".3">
-                  <p class="mb-30">
-                     Trainings, workshops and roundtables convened by FinExcel in Dhaka. Every programme can also be delivered in-house for a single institution.
-                  </p>
-               </div>
-               <div class="fade-anim" data-delay=".5">
-                  <a class="oit-btn-border btn-black-bg d-inline-flex align-items-center justify-content-between " href="#contact">
-   <span>
-      <span class="text-1">Register your interest</span>
-      <span class="text-2" aria-hidden="true">Register your interest</span>
-   </span>
-   <i><span><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M11.4801 6.10132e-06L12.4381 0.99062L12.3305 1.09859C9.55759 4.01224 9.66053 7.97757 11.492 9.87138L10.5199 10.8562C9.01152 9.29621 8.47367 6.87412 9.01459 4.46212L0.955362 12.6371L-0.000299374 11.6476L8.06131 3.46911C5.69918 4.00199 3.33666 3.42959 1.82692 1.86845L2.799 0.882416C4.65351 2.80007 8.59851 2.92281 11.4801 6.10132e-06Z" fill="currentcolor" /></svg><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M11.4801 6.10132e-06L12.4381 0.99062L12.3305 1.09859C9.55759 4.01224 9.66053 7.97757 11.492 9.87138L10.5199 10.8562C9.01152 9.29621 8.47367 6.87412 9.01459 4.46212L0.955362 12.6371L-0.000299374 11.6476L8.06131 3.46911C5.69918 4.00199 3.33666 3.42959 1.82692 1.86845L2.799 0.882416C4.65351 2.80007 8.59851 2.92281 11.4801 6.10132e-06Z" fill="currentcolor" /></svg></span></i>
-</a>
-               </div>
+         <div class="col-xl-6">
+            <div class="oit-section-title-box mb-100">
+               <h2 class="oit-section-title oit-title-revel">In numbers</h2>
             </div>
          </div>
-         <div class="offset-xl-1 col-xl-6">
-            <div class="dg-funfact-right">
-<div class="dg-funfact-item d-flex justify-content-between align-items-center">
-   <div class="dg-funfact-title">22<span>Oct</span></div>
-   <div class="fx-event-meta">
-      <em>Training · 2 days · Dhaka</em>
-      <p>AI in Banking & NBFIs: <br> from pilots to practice</p>
-   </div>
-</div><div class="dg-funfact-item d-flex justify-content-between align-items-center">
-   <div class="dg-funfact-title">05<span>Nov</span></div>
-   <div class="fx-event-meta">
-      <em>Workshop · Dhaka</em>
-      <p>Smart Loan Recovery <br> & NPL Management</p>
-   </div>
-</div><div class="dg-funfact-item d-flex justify-content-between align-items-center">
-   <div class="dg-funfact-title">19<span>Nov</span></div>
-   <div class="fx-event-meta">
-      <em>Training · 2 days · Dhaka</em>
-      <p>Ensuring Cyber <br> Security Resilience</p>
-   </div>
-</div><div class="dg-funfact-item d-flex justify-content-between align-items-center">
-   <div class="dg-funfact-title">03<span>Dec</span></div>
-   <div class="fx-event-meta">
-      <em>Roundtable · Dhaka</em>
-      <p>Banking leaders’ roundtable <br> on sector reform</p>
-   </div>
-</div>
-               <span class="fx-note">Dates are indicative until the 2026 programme calendar is published.</span>
+      </div>
+      <div class="row align-items-end">
+         <div class="col-xl-3 col-md-6">
+            <div class="sd-funfact-card card-1 d-flex flex-column justify-content-between mb-30" data-bg-color="#ffffff">
+               <h3 class="sd-funfact-title"><i class="purecounter" data-purecounter-duration="1" data-purecounter-end="14">14</i>+</h3>
+               <span>Years in the sector</span>
+            </div>
+         </div>
+         <div class="col-xl-3 col-md-6">
+            <div class="sd-funfact-card card-2 sd-content-white d-flex flex-column justify-content-between mb-30" data-bg-color="#0b1f3a">
+               <img class="fx-card-mark" src="assets/img/mark-bg.svg" alt="" aria-hidden="true">
+               <h3 class="sd-funfact-title"><i class="purecounter" data-purecounter-duration="1" data-purecounter-end="40">40</i></h3>
+               <span>Years our chairman has spent in banking</span>
+            </div>
+         </div>
+         <div class="col-xl-3 col-md-6">
+            <div class="sd-funfact-card card-3 d-flex flex-column justify-content-between mb-30" data-bg-color="#ffffff">
+               <h3 class="sd-funfact-title"><i class="purecounter" data-purecounter-duration="1" data-purecounter-end="3">3</i></h3>
+               <span>Connected practices</span>
+            </div>
+         </div>
+         <div class="col-xl-3 col-md-6">
+            <div class="sd-funfact-card card-4 sd-content-white d-flex flex-column justify-content-between mb-30" data-bg-color="#2858a8">
+               <img class="fx-card-mark" src="assets/img/mark-bg.svg" alt="" aria-hidden="true">
+               <h3 class="sd-funfact-title"><i class="purecounter" data-purecounter-duration="1" data-purecounter-end="4">4</i></h3>
+               <span>Institutional partners</span>
             </div>
          </div>
       </div>
    </div>
 </section>
-<!-- events area end -->
-<!-- partner strip start -->
-<section class="fx-partners fix pt-50 pb-50" aria-label="Institutional partners">
-   <div class="container mb-25">
-      <span class="fx-partners-label">Institutional partners</span>
+<!-- numbers area end -->
+<!-- why area start -->
+<section id="why" class="sd-choose-area fx-sd-why oit-panel-pin-area pt-100 pb-100" data-background="assets/img/finexcel/group-leadership.jpg">
+   <div class="container">
+      <div class="sd-choose-top mb-200">
+         <div class="row align-items-center">
+            <div class="col-xl-8">
+               <div class="oit-choose-title-box">
+                  <span class="oit-section-subtitle oit-text-white mb-20">Why FinExcel</span>
+                  <h2 class="oit-section-title oit-text-white oit-title-revel">Why institutions <br> choose FinExcel</h2>
+               </div>
+            </div>
+            <div class="col-xl-4">
+               <div class="sd-choose-top-content">
+                  <p>One firm that can test a decision, build the team to carry it out, and take the conversation to the wider sector — led by people who have run the functions they advise on.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+<div class="row">
+   <div class="offset-xxl-7 offset-xl-6 col-xxl-3 col-xl-4 col-lg-6 col-md-8">
+      <div class="sd-choose-card oit-panel-pin mb-100" data-start="top 25%">
+         <div class="sd-choose-card-inner">
+            <div class="sd-choose-card-head d-flex align-items-center">
+               <span class="sd-choose-card-icon"><svg class="fx-ribbon" width="52" height="52" aria-hidden="true"><use href="#fx-ribbon"/></svg></span>
+               <h3 class="sd-choose-card-title">Senior <br> practitioners</h3>
+            </div>
+            <div class="sd-choose-card-body">
+               <p>Programmes are designed and taught by senior bankers and specialists — not generalist trainers.</p>
+            </div>
+         </div>
+      </div>
    </div>
-   <div class="oit-text-slider-item d-flex align-items-center slide-ltr">
-      <img src="assets/img/finexcel/partner/agrani-bank.jpg" width="200" height="76" alt="Agrani Bank PLC"><img src="assets/img/finexcel/partner/green-delta.jpg" width="200" height="76" alt="Green Delta Insurance PLC"><img src="assets/img/finexcel/partner/lankabangla.png" width="200" height="76" alt="LankaBangla Securities"><img src="assets/img/finexcel/partner/dataedge.jpg" width="200" height="76" alt="DataEdge Limited"><img src="assets/img/finexcel/partner/agrani-bank.jpg" width="200" height="76" alt="" aria-hidden="true"><img src="assets/img/finexcel/partner/green-delta.jpg" width="200" height="76" alt="" aria-hidden="true"><img src="assets/img/finexcel/partner/lankabangla.png" width="200" height="76" alt="" aria-hidden="true"><img src="assets/img/finexcel/partner/dataedge.jpg" width="200" height="76" alt="" aria-hidden="true"><img src="assets/img/finexcel/partner/agrani-bank.jpg" width="200" height="76" alt="" aria-hidden="true"><img src="assets/img/finexcel/partner/green-delta.jpg" width="200" height="76" alt="" aria-hidden="true"><img src="assets/img/finexcel/partner/lankabangla.png" width="200" height="76" alt="" aria-hidden="true"><img src="assets/img/finexcel/partner/dataedge.jpg" width="200" height="76" alt="" aria-hidden="true"><img src="assets/img/finexcel/partner/agrani-bank.jpg" width="200" height="76" alt="" aria-hidden="true"><img src="assets/img/finexcel/partner/green-delta.jpg" width="200" height="76" alt="" aria-hidden="true"><img src="assets/img/finexcel/partner/lankabangla.png" width="200" height="76" alt="" aria-hidden="true"><img src="assets/img/finexcel/partner/dataedge.jpg" width="200" height="76" alt="" aria-hidden="true">
+</div>
+<div class="row">
+   <div class="offset-xxl-2 offset-xl-2 col-xxl-3 col-xl-4 col-lg-6 col-md-8">
+      <div class="sd-choose-card oit-panel-pin mb-100" data-start="top 25%">
+         <div class="sd-choose-card-inner">
+            <div class="sd-choose-card-head d-flex align-items-center">
+               <span class="sd-choose-card-icon"><svg class="fx-ribbon" width="52" height="52" aria-hidden="true"><use href="#fx-ribbon"/></svg></span>
+               <h3 class="sd-choose-card-title">Built for <br> Bangladesh</h3>
+            </div>
+            <div class="sd-choose-card-body">
+               <p>Cases, regulation and market realities drawn from Bangladesh's own banks and NBFIs.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="row">
+   <div class="offset-xxl-7 offset-xl-6 col-xxl-3 col-xl-4 col-lg-6 col-md-8">
+      <div class="sd-choose-card oit-panel-pin mb-100" data-start="top 25%">
+         <div class="sd-choose-card-inner">
+            <div class="sd-choose-card-head d-flex align-items-center">
+               <span class="sd-choose-card-icon"><svg class="fx-ribbon" width="52" height="52" aria-hidden="true"><use href="#fx-ribbon"/></svg></span>
+               <h3 class="sd-choose-card-title">One firm, <br> three levers</h3>
+            </div>
+            <div class="sd-choose-card-body">
+               <p>Test a decision, build the team to carry it out, and take the conversation to the wider sector.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="row">
+   <div class="offset-xxl-2 offset-xl-2 col-xxl-3 col-xl-4 col-lg-6 col-md-8">
+      <div class="sd-choose-card oit-panel-pin mb-100" data-start="top 25%">
+         <div class="sd-choose-card-inner">
+            <div class="sd-choose-card-head d-flex align-items-center">
+               <span class="sd-choose-card-icon"><svg class="fx-ribbon" width="52" height="52" aria-hidden="true"><use href="#fx-ribbon"/></svg></span>
+               <h3 class="sd-choose-card-title">Shaped with <br> partners</h3>
+            </div>
+            <div class="sd-choose-card-body">
+               <p>FinExcel was founded by experts and institutions together — and partnership is still how we work.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
    </div>
 </section>
-<!-- partner strip end -->
+<!-- why area end -->
 <!-- voices area start -->
 <!-- STAKEHOLDER: only the first quote is real; replace the placeholders with approved quotes and consent. -->
-<section class="dg-testimonial-area fx-voices p-relative pt-150 pb-150 z-index-1" data-bg-color="#f4f9fc">
+<section class="dg-testimonial-area st-testimonial-style fx-voices fx-sd-voices p-relative pt-150 pb-150 z-index-1" data-bg-color="#f4f9fc">
    <div class="container">
 <div class="row">
    <div class="col-xl-2">
-      <div class="oit-section-subtitle-box mb-30 text-center text-lg-start">
-         <span class="oit-section-subtitle">Participants</span>
+      <div class="oit-section-subtitle-box ">
+         <span class="oit-section-subtitle ">Participants</span>
       </div>
    </div>
 </div>
@@ -734,16 +567,26 @@
       </div>
    </div>
 </div>
-      <div class="row">
-         <div class="col-12">
+      <div class="row gx-2">
+         <div class="col-xxl-3 d-none d-xxl-block">
+            <div class="st-testimonial-info d-flex flex-column justify-content-center align-items-center">
+               <strong class="st-testimonial-ratting">14+</strong>
+               <span>Years of programmes</span>
+               <div><img src="assets/img/logo.png" width="150" alt="FinExcel"></div>
+               <p><b>Trusted by</b> banks &amp; NBFIs across Bangladesh</p>
+            </div>
+         </div>
+         <div class="col-xxl-9">
             <div class="dg-testimonial-wrapper">
-               <div class="swiper-container dg-testimonial-active">
+               <div class="swiper-container st-testimonial-active">
                   <div class="swiper-wrapper">
 <div class="swiper-slide">
-   <figure class="dg-testimonial-item mb-0">
-      <span class="quote d-block pb-70"><svg width="53" height="38" viewBox="0 0 53 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M52.9994 15.1432H41.6423L49.2138 0.000377655H37.8566L30.2852 15.1432V37.8574H52.9994V15.1432Z" fill="black" /><path d="M22.7143 37.8574V15.1432H11.3571L18.9286 0.000377655H7.57148L-1.90735e-06 15.1432V37.8574H22.7143Z" fill="black" /></svg></span>
-      <blockquote class="mb-0"><p class="text-large mb-25">In my 14 years of banking experience, I have only had the opportunity to interact with industry icons at Finexcel.</p></blockquote>
-      <p class="text-small mb-70">Capacity Building programme participant</p>
+   <figure class="dg-testimonial-item d-flex flex-column justify-content-between mb-0">
+      <div class="dg-testimonial-top">
+         <span class="quote d-block pb-70"><svg width="53" height="38" viewBox="0 0 53 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M52.9994 15.1432H41.6423L49.2138 0.000377655H37.8566L30.2852 15.1432V37.8574H52.9994V15.1432Z" fill="black" /><path d="M22.7143 37.8574V15.1432H11.3571L18.9286 0.000377655H7.57148L-1.90735e-06 15.1432V37.8574H22.7143Z" fill="black" /></svg></span>
+         <blockquote class="mb-0"><p class="text-large mb-25">In my 14 years of banking experience, I have only had the opportunity to interact with industry icons at Finexcel.</p></blockquote>
+         <p class="text-small">Capacity Building programme participant</p>
+      </div>
       <figcaption class="dg-testimonial-authour-box d-flex align-items-center">
          <div class="dg-testimonial-authour-thumb mr-15"><span class="fx-initials" aria-hidden="true">SH</span></div>
          <div class="dg-testimonial-authour-info">
@@ -752,11 +595,14 @@
          </div>
       </figcaption>
    </figure>
-</div><div class="swiper-slide">
-   <figure class="dg-testimonial-item mb-0">
-      <span class="quote d-block pb-70"><svg width="53" height="38" viewBox="0 0 53 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M52.9994 15.1432H41.6423L49.2138 0.000377655H37.8566L30.2852 15.1432V37.8574H52.9994V15.1432Z" fill="black" /><path d="M22.7143 37.8574V15.1432H11.3571L18.9286 0.000377655H7.57148L-1.90735e-06 15.1432V37.8574H22.7143Z" fill="black" /></svg></span>
-      <blockquote class="mb-0"><p class="text-large large-style-2 mb-60">The sessions were built around the cases our recovery team faces every week. We went back with a plan we could use the next morning.</p></blockquote>
-      
+</div>
+<div class="swiper-slide">
+   <figure class="dg-testimonial-item d-flex flex-column justify-content-between mb-0">
+      <div class="dg-testimonial-top">
+         <span class="quote d-block pb-70"><svg width="53" height="38" viewBox="0 0 53 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M52.9994 15.1432H41.6423L49.2138 0.000377655H37.8566L30.2852 15.1432V37.8574H52.9994V15.1432Z" fill="black" /><path d="M22.7143 37.8574V15.1432H11.3571L18.9286 0.000377655H7.57148L-1.90735e-06 15.1432V37.8574H22.7143Z" fill="black" /></svg></span>
+         <blockquote class="mb-0"><p class="text-large mb-25">The sessions were built around the cases our recovery team faces every week. We went back with a plan we could use the next morning.</p></blockquote>
+         
+      </div>
       <figcaption class="dg-testimonial-authour-box d-flex align-items-center">
          <div class="dg-testimonial-authour-thumb mr-15"><span class="fx-initials is-placeholder" aria-hidden="true">—</span></div>
          <div class="dg-testimonial-authour-info">
@@ -765,11 +611,14 @@
          </div>
       </figcaption>
    </figure>
-</div><div class="swiper-slide">
-   <figure class="dg-testimonial-item mb-0">
-      <span class="quote d-block pb-70"><svg width="53" height="38" viewBox="0 0 53 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M52.9994 15.1432H41.6423L49.2138 0.000377655H37.8566L30.2852 15.1432V37.8574H52.9994V15.1432Z" fill="black" /><path d="M22.7143 37.8574V15.1432H11.3571L18.9286 0.000377655H7.57148L-1.90735e-06 15.1432V37.8574H22.7143Z" fill="black" /></svg></span>
-      <blockquote class="mb-0"><p class="text-large large-style-2 mb-60">Hearing from people who have led banks through change made the difference. It was practical, frank and specific to Bangladesh.</p></blockquote>
-      
+</div>
+<div class="swiper-slide">
+   <figure class="dg-testimonial-item d-flex flex-column justify-content-between mb-0">
+      <div class="dg-testimonial-top">
+         <span class="quote d-block pb-70"><svg width="53" height="38" viewBox="0 0 53 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M52.9994 15.1432H41.6423L49.2138 0.000377655H37.8566L30.2852 15.1432V37.8574H52.9994V15.1432Z" fill="black" /><path d="M22.7143 37.8574V15.1432H11.3571L18.9286 0.000377655H7.57148L-1.90735e-06 15.1432V37.8574H22.7143Z" fill="black" /></svg></span>
+         <blockquote class="mb-0"><p class="text-large mb-25">Hearing from people who have led banks through change made the difference. It was practical, frank and specific to Bangladesh.</p></blockquote>
+         
+      </div>
       <figcaption class="dg-testimonial-authour-box d-flex align-items-center">
          <div class="dg-testimonial-authour-thumb mr-15"><span class="fx-initials is-placeholder" aria-hidden="true">—</span></div>
          <div class="dg-testimonial-authour-info">
@@ -778,11 +627,14 @@
          </div>
       </figcaption>
    </figure>
-</div><div class="swiper-slide">
-   <figure class="dg-testimonial-item mb-0">
-      <span class="quote d-block pb-70"><svg width="53" height="38" viewBox="0 0 53 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M52.9994 15.1432H41.6423L49.2138 0.000377655H37.8566L30.2852 15.1432V37.8574H52.9994V15.1432Z" fill="black" /><path d="M22.7143 37.8574V15.1432H11.3571L18.9286 0.000377655H7.57148L-1.90735e-06 15.1432V37.8574H22.7143Z" fill="black" /></svg></span>
-      <blockquote class="mb-0"><p class="text-large large-style-2 mb-60">Our IT and risk teams finally spoke the same language. The programme gave us a shared view of where our exposure really sits.</p></blockquote>
-      
+</div>
+<div class="swiper-slide">
+   <figure class="dg-testimonial-item d-flex flex-column justify-content-between mb-0">
+      <div class="dg-testimonial-top">
+         <span class="quote d-block pb-70"><svg width="53" height="38" viewBox="0 0 53 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M52.9994 15.1432H41.6423L49.2138 0.000377655H37.8566L30.2852 15.1432V37.8574H52.9994V15.1432Z" fill="black" /><path d="M22.7143 37.8574V15.1432H11.3571L18.9286 0.000377655H7.57148L-1.90735e-06 15.1432V37.8574H22.7143Z" fill="black" /></svg></span>
+         <blockquote class="mb-0"><p class="text-large mb-25">Our IT and risk teams finally spoke the same language. The programme gave us a shared view of where our exposure really sits.</p></blockquote>
+         
+      </div>
       <figcaption class="dg-testimonial-authour-box d-flex align-items-center">
          <div class="dg-testimonial-authour-thumb mr-15"><span class="fx-initials is-placeholder" aria-hidden="true">—</span></div>
          <div class="dg-testimonial-authour-info">
@@ -800,14 +652,187 @@
    </div>
 </section>
 <!-- voices area end -->
+<!-- partner strip start -->
+<section class="fx-partners fix pt-50 pb-50" aria-label="Institutional partners">
+   <div class="container mb-25">
+      <span class="fx-partners-label">Institutional partners</span>
+   </div>
+   <div class="oit-text-slider-item d-flex align-items-center slide-ltr">
+      <img src="assets/img/finexcel/partner/agrani-bank.jpg" width="200" height="76" alt="Agrani Bank PLC"><img src="assets/img/finexcel/partner/green-delta.jpg" width="200" height="76" alt="Green Delta Insurance PLC"><img src="assets/img/finexcel/partner/lankabangla.png" width="200" height="76" alt="LankaBangla Securities"><img src="assets/img/finexcel/partner/dataedge.jpg" width="200" height="76" alt="DataEdge Limited"><img src="assets/img/finexcel/partner/agrani-bank.jpg" width="200" height="76" alt="" aria-hidden="true"><img src="assets/img/finexcel/partner/green-delta.jpg" width="200" height="76" alt="" aria-hidden="true"><img src="assets/img/finexcel/partner/lankabangla.png" width="200" height="76" alt="" aria-hidden="true"><img src="assets/img/finexcel/partner/dataedge.jpg" width="200" height="76" alt="" aria-hidden="true"><img src="assets/img/finexcel/partner/agrani-bank.jpg" width="200" height="76" alt="" aria-hidden="true"><img src="assets/img/finexcel/partner/green-delta.jpg" width="200" height="76" alt="" aria-hidden="true"><img src="assets/img/finexcel/partner/lankabangla.png" width="200" height="76" alt="" aria-hidden="true"><img src="assets/img/finexcel/partner/dataedge.jpg" width="200" height="76" alt="" aria-hidden="true"><img src="assets/img/finexcel/partner/agrani-bank.jpg" width="200" height="76" alt="" aria-hidden="true"><img src="assets/img/finexcel/partner/green-delta.jpg" width="200" height="76" alt="" aria-hidden="true"><img src="assets/img/finexcel/partner/lankabangla.png" width="200" height="76" alt="" aria-hidden="true"><img src="assets/img/finexcel/partner/dataedge.jpg" width="200" height="76" alt="" aria-hidden="true">
+   </div>
+</section>
+<!-- partner strip end -->
+<!-- leadership area start -->
+<section id="leadership" class="sd-team-area fx-sd-team pt-150 pb-100 p-relative" data-bg-color="#ffffff">
+   <div class="container">
+      <div class="row">
+         <div class="col-xxl-2">
+            <div class="oit-section-subtitle-box mb-30">
+               <span class="oit-section-subtitle">Leadership</span>
+            </div>
+         </div>
+      </div>
+      <div class="row justify-content-end">
+         <div class="col-xxl-10">
+            <div class="row">
+               <div class="col-xl-12">
+                  <div class="oit-section-title-box mb-90">
+                     <h2 class="oit-section-title oit-title-revel">Led by people who <br> built the sector</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="sd-team-row-wrap">
+<div class="sd-team-row-item">
+   <div class="row row-cols-xl-3 row-cols-1">
+      <div class="col">
+         <div class="sd-team-item d-flex align-items-center">
+            <div class="sd-team-thumb">
+               <a href="team-details.html" tabindex="-1" aria-hidden="true">
+                  <img src="assets/img/finexcel/team/selim-barkat.jpg" width="120" height="120" alt="Portrait of Selim Barkat">
+               </a>
+            </div>
+            <div class="sd-team-content">
+               <h3 class="sd-team-title"><a class="border-line" href="team-details.html">Selim Barkat</a></h3>
+               <span>Chairman</span>
+            </div>
+         </div>
+      </div>
+      <div class="col">
+         <div class="sd-team-item d-flex align-items-center justify-content-xl-center">
+            <div class="sd-team-content">
+               <p class="fx-team-bio">Four decades in banking across Bangladesh and the US, including 30 years with Citibank N.A.</p>
+            </div>
+         </div>
+      </div>
+      <div class="col">
+         <div class="sd-team-item d-flex align-items-center justify-content-xl-end">
+            <div class="sd-team-social">
+               <a href="team-details.html" aria-label="Read Selim Barkat's profile"><i class="fal fa-arrow-up-right" aria-hidden="true"></i></a>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="sd-team-row-item">
+   <div class="row row-cols-xl-3 row-cols-1">
+      <div class="col">
+         <div class="sd-team-item d-flex align-items-center">
+            <div class="sd-team-thumb">
+               <a href="team-details.html" tabindex="-1" aria-hidden="true">
+                  <img src="assets/img/finexcel/team/nilufar-rahman.jpg" width="120" height="120" alt="Portrait of Nilufar Rahman">
+               </a>
+            </div>
+            <div class="sd-team-content">
+               <h3 class="sd-team-title"><a class="border-line" href="team-details.html">Nilufar Rahman</a></h3>
+               <span>Chief Executive Officer</span>
+            </div>
+         </div>
+      </div>
+      <div class="col">
+         <div class="sd-team-item d-flex align-items-center justify-content-xl-center">
+            <div class="sd-team-content">
+               <p class="fx-team-bio">Over 20 years with American Express Bank, Citibank, DHL and Eastern Bank.</p>
+            </div>
+         </div>
+      </div>
+      <div class="col">
+         <div class="sd-team-item d-flex align-items-center justify-content-xl-end">
+            <div class="sd-team-social">
+               <a href="team-details.html" aria-label="Read Nilufar Rahman's profile"><i class="fal fa-arrow-up-right" aria-hidden="true"></i></a>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="sd-team-row-item">
+   <div class="row row-cols-xl-3 row-cols-1">
+      <div class="col">
+         <div class="sd-team-item d-flex align-items-center">
+            <div class="sd-team-thumb">
+               <a href="team-details.html" tabindex="-1" aria-hidden="true">
+                  <img src="assets/img/finexcel/team/nasir-uddin-chowdhury.jpg" width="120" height="120" alt="Portrait of Mohammed Nasir Uddin Chowdhury">
+               </a>
+            </div>
+            <div class="sd-team-content">
+               <h3 class="sd-team-title"><a class="border-line" href="team-details.html">Mohammed Nasir Uddin Chowdhury</a></h3>
+               <span>Vice Chairman</span>
+            </div>
+         </div>
+      </div>
+      <div class="col">
+         <div class="sd-team-item d-flex align-items-center justify-content-xl-center">
+            <div class="sd-team-content">
+               <p class="fx-team-bio">Managing Director of LankaBangla Securities and Chairman of BD Venture Ltd.</p>
+            </div>
+         </div>
+      </div>
+      <div class="col">
+         <div class="sd-team-item d-flex align-items-center justify-content-xl-end">
+            <div class="sd-team-social">
+               <a href="team-details.html" aria-label="Read Mohammed Nasir Uddin Chowdhury's profile"><i class="fal fa-arrow-up-right" aria-hidden="true"></i></a>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="sd-team-row-item">
+   <div class="row row-cols-xl-3 row-cols-1">
+      <div class="col">
+         <div class="sd-team-item d-flex align-items-center">
+            <div class="sd-team-thumb">
+               <a href="team-details.html" tabindex="-1" aria-hidden="true">
+                  <img src="assets/img/finexcel/team/mamun-rashid.jpg" width="120" height="120" alt="Portrait of Mamun Rashid">
+               </a>
+            </div>
+            <div class="sd-team-content">
+               <h3 class="sd-team-title"><a class="border-line" href="team-details.html">Mamun Rashid</a></h3>
+               <span>Director</span>
+            </div>
+         </div>
+      </div>
+      <div class="col">
+         <div class="sd-team-item d-flex align-items-center justify-content-xl-center">
+            <div class="sd-team-content">
+               <p class="fx-team-bio">Former Managing Partner of PwC Bangladesh.</p>
+            </div>
+         </div>
+      </div>
+      <div class="col">
+         <div class="sd-team-item d-flex align-items-center justify-content-xl-end">
+            <div class="sd-team-social">
+               <a href="team-details.html" aria-label="Read Mamun Rashid's profile"><i class="fal fa-arrow-up-right" aria-hidden="true"></i></a>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+            </div>
+            <div class="fx-board-ex fade-anim" data-delay=".3">
+               <span>Where our board built their careers</span>
+               <span>Citibank N.A.</span><span>Standard Chartered</span><span>ANZ Grindlays</span><span>HBL</span><span>American Express Bank</span><span>Eastern Bank</span><span>PwC Bangladesh</span><span>IBM</span>
+            </div>
+            <div class="pt-60 fade-anim" data-delay=".5">
+               <a class="oit-btn-border btn-black-bg d-inline-flex align-items-center justify-content-between " href="team.html">
+   <span>
+      <span class="text-1">Meet the full board</span>
+      <span class="text-2" aria-hidden="true">Meet the full board</span>
+   </span>
+   <i><span><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M11.4801 6.10132e-06L12.4381 0.99062L12.3305 1.09859C9.55759 4.01224 9.66053 7.97757 11.492 9.87138L10.5199 10.8562C9.01152 9.29621 8.47367 6.87412 9.01459 4.46212L0.955362 12.6371L-0.000299374 11.6476L8.06131 3.46911C5.69918 4.00199 3.33666 3.42959 1.82692 1.86845L2.799 0.882416C4.65351 2.80007 8.59851 2.92281 11.4801 6.10132e-06Z" fill="currentcolor" /></svg><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M11.4801 6.10132e-06L12.4381 0.99062L12.3305 1.09859C9.55759 4.01224 9.66053 7.97757 11.492 9.87138L10.5199 10.8562C9.01152 9.29621 8.47367 6.87412 9.01459 4.46212L0.955362 12.6371L-0.000299374 11.6476L8.06131 3.46911C5.69918 4.00199 3.33666 3.42959 1.82692 1.86845L2.799 0.882416C4.65351 2.80007 8.59851 2.92281 11.4801 6.10132e-06Z" fill="currentcolor" /></svg></span></i>
+</a>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<!-- leadership area end -->
 <!-- contact area start -->
-<section id="contact" class="dg-contact-area fx-contact z-index-1 p-relative pt-120 pb-120" data-bg-color="#0b1f3a">
+<section id="contact" class="dg-contact-area fx-contact z-index-1 p-relative pt-150 pb-150" data-bg-color="#0b1f3a">
    <div class="container">
       <div class="row">
          <div class="col-xl-5">
             <div class="dg-contact-left oit-section-title-box pt-130">
-               <h2 class="oit-section-title text-white fsz-60 mb-40 oit-title-revel">Bring us your <br> next <span class="fx-accent">challenge</span></h2>
-               <div class="dg-contact-info-wrap d-flex mb-30">
+               <h2 class="oit-section-title text-white fsz-60 mb-40 fade-anim" data-delay=".3">Bring us your <br> next <span class="fx-accent">challenge</span></h2>
+               <div class="dg-contact-info-wrap d-flex mb-30 fade-anim" data-delay=".5">
                   <div class="dg-contact-info mr-55 mb-30">
                      <span>Office</span>
                      <a href="https://maps.app.goo.gl/2Chs2JFJoDxKYVNd6" target="_blank" rel="noopener">F1, Plot 16, Road 23, <br> Block B, Banani, <br> Dhaka 1213, Bangladesh</a>
@@ -817,11 +842,11 @@
                      <a href="mailto:info@finexcelbd.com">Saturday–Thursday, <br> 10:00–18:00 <br> info@finexcelbd.com</a>
                   </div>
                </div>
-               <div class="dg-contact-social">
-<a class="border-line" href="https://www.linkedin.com/company/financial-excellence-ltd/" target="_blank" rel="noopener">LinkedIn</a>
-<a class="border-line" href="https://www.facebook.com/financialexcellence/" target="_blank" rel="noopener">Facebook</a>
-<a class="border-line" href="https://x.com/finexcelbd" target="_blank" rel="noopener">X</a>
-<a class="border-line" href="https://www.instagram.com/finexcelbd/" target="_blank" rel="noopener">Instagram</a>
+               <div class="dg-contact-social fade-anim" data-delay=".7">
+                  <a class="border-line" href="https://www.linkedin.com/company/financial-excellence-ltd/" target="_blank" rel="noopener">LinkedIn</a>
+                  <a class="border-line" href="https://www.facebook.com/financialexcellence/" target="_blank" rel="noopener">Facebook</a>
+                  <a class="border-line" href="https://x.com/finexcelbd" target="_blank" rel="noopener">X</a>
+                  <a class="border-line" href="https://www.instagram.com/finexcelbd/" target="_blank" rel="noopener">Instagram</a>
                </div>
             </div>
          </div>
@@ -903,7 +928,7 @@
 </section>
 <!-- contact area end -->
 <!-- faq area start -->
-<section class="oit-faq-area oit-faq-style fx-faq pt-120 pb-95" data-bg-color="#f4f9fc">
+<section class="oit-faq-area oit-faq-style fx-faq pt-120 pb-100" data-bg-color="#f4f9fc">
    <div class="container">
       <div class="row">
          <div class="col-xl-4">
@@ -911,11 +936,13 @@
                <span class="oit-section-subtitle">FAQ</span>
             </div>
             <div class="oit-section-title-box mb-70 text-center text-md-start">
-               <h2 class="oit-section-title fsz-60 oit-title-revel">Common <br> questions</h2>
+               <h2 class="oit-section-title fsz-60">Common <br> questions</h2>
             </div>
             <div class="oit-price-item mb-30">
+               <div class="fx-faq-glyph mb-30" aria-hidden="true"><svg class="fx-ribbon" width="52" height="52" aria-hidden="true"><use href="#fx-ribbon"/></svg></div>
                <div class="oit-price-head-content">
                   <h3 class="oit-price-title mb-5">Plan a programme <br> for your team</h3>
+                  <p class="fx-faq-contact">Programme enquiries: <a href="mailto:info@finexcelbd.com">info@finexcelbd.com</a></p>
                   <a class="oit-btn-border btn-white-bg d-inline-flex align-items-center justify-content-between mt-35" href="#contact">
    <span>
       <span class="text-1">Talk to us</span>
@@ -929,7 +956,7 @@
          <div class="offset-xl-1 col-xl-7">
             <div class="oit-faq-accordion-wrap mb-30">
                <div class="accordions" id="fxFaqAccordion">
-<div class="accordion-item fade-anim">
+<div class="accordion-item fade-anim" data-delay=".3">
    <h3 class="accordion-header">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#fxFaq0" aria-expanded="true" aria-controls="fxFaq0">
          Who does FinExcel work with?
@@ -939,7 +966,8 @@
    <div id="fxFaq0" class="accordion-collapse collapse show" data-bs-parent="#fxFaqAccordion">
       <div class="accordion-body"><p>Banks, NBFIs, corporates, development organisations, industry bodies and financial professionals in Bangladesh — and international firms looking at the Bangladesh market.</p></div>
    </div>
-</div><div class="accordion-item fade-anim">
+</div>
+<div class="accordion-item fade-anim" data-delay=".5">
    <h3 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fxFaq1" aria-expanded="false" aria-controls="fxFaq1">
          Can a programme be built for our institution alone?
@@ -949,7 +977,8 @@
    <div id="fxFaq1" class="accordion-collapse collapse" data-bs-parent="#fxFaqAccordion">
       <div class="accordion-body"><p>Yes. Programmes can be delivered in-house and built around your own cases. In July 2026, for example, FinExcel designed a two-day Negotiation Mastery programme for City Bank PLC's Recovery &amp; Collection team.</p></div>
    </div>
-</div><div class="accordion-item fade-anim">
+</div>
+<div class="accordion-item fade-anim" data-delay=".7">
    <h3 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fxFaq2" aria-expanded="false" aria-controls="fxFaq2">
          Who teaches FinExcel programmes?
@@ -959,7 +988,8 @@
    <div id="fxFaq2" class="accordion-collapse collapse" data-bs-parent="#fxFaqAccordion">
       <div class="accordion-body"><p>Senior practitioners — bankers and specialists who have run the functions they teach. FinExcel's board brings experience from Citibank N.A., Standard Chartered, HBL, American Express Bank, Eastern Bank and PwC Bangladesh.</p></div>
    </div>
-</div><div class="accordion-item fade-anim">
+</div>
+<div class="accordion-item fade-anim" data-delay=".9">
    <h3 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fxFaq3" aria-expanded="false" aria-controls="fxFaq3">
          Do you advise companies entering Bangladesh?
@@ -969,7 +999,8 @@
    <div id="fxFaq3" class="accordion-collapse collapse" data-bs-parent="#fxFaqAccordion">
       <div class="accordion-body"><p>Yes. The Advisory practice supports international companies entering Bangladesh, and Bangladeshi firms expanding abroad, with feasibility studies, business plans and risk insight.</p></div>
    </div>
-</div><div class="accordion-item fade-anim">
+</div>
+<div class="accordion-item fade-anim" data-delay=".11">
    <h3 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fxFaq4" aria-expanded="false" aria-controls="fxFaq4">
          How can our organisation partner with FinExcel?
@@ -987,69 +1018,169 @@
    </div>
 </section>
 <!-- faq area end -->
-<!-- closing marquee start -->
-<section class="oit-text-slider-area fx-closing pt-135 pb-135 fix p-relative" data-bg-color="#06121f" aria-label="Contact FinExcel">
-   <div class="oit-text-slider-btn fade-anim" data-delay=".7" data-ease="bounce" data-fade-from="top">
-      <a class="oit-btn-border btn-white-bg d-inline-flex align-items-center justify-content-between " href="#contact">
+<div class="fix fx-practice-marquee pt-40 pb-40" aria-hidden="true">
+   <div class="oit-text-slider-item d-flex align-items-center slide-ltr"><span>Advisory</span><span class="fx-mq-glyph"><svg class="fx-ribbon" width="52" height="52" aria-hidden="true"><use href="#fx-ribbon"/></svg></span><span>Capacity Building</span><span class="fx-mq-glyph"><svg class="fx-ribbon" width="52" height="52" aria-hidden="true"><use href="#fx-ribbon"/></svg></span><span>Advocacy</span><span class="fx-mq-glyph"><svg class="fx-ribbon" width="52" height="52" aria-hidden="true"><use href="#fx-ribbon"/></svg></span><span>Advisory</span><span class="fx-mq-glyph"><svg class="fx-ribbon" width="52" height="52" aria-hidden="true"><use href="#fx-ribbon"/></svg></span><span>Capacity Building</span><span class="fx-mq-glyph"><svg class="fx-ribbon" width="52" height="52" aria-hidden="true"><use href="#fx-ribbon"/></svg></span><span>Advocacy</span><span class="fx-mq-glyph"><svg class="fx-ribbon" width="52" height="52" aria-hidden="true"><use href="#fx-ribbon"/></svg></span></div>
+</div>
+<!-- events area start -->
+<!-- STAKEHOLDER: sample dates until the programme calendar is supplied; confirm the featured programme's description. -->
+<section id="events" class="fx-sd-events p-relative pt-120 pb-120 fix" data-bg-color="#0b1f3a">
+   <img class="fx-events-mark" src="assets/img/mark-bg.svg" alt="" aria-hidden="true">
+   <div class="container">
+<div class="row">
+   <div class="col-xl-2">
+      <div class="oit-section-subtitle-box mb-30 text-center text-lg-start">
+         <span class="oit-section-subtitle oit-text-white">Events</span>
+      </div>
+   </div>
+</div>
+      <div class="row align-items-end">
+         <div class="offset-xl-1 col-xl-7">
+            <div class="oit-section-title-box pl-70 mb-30 text-center text-lg-start">
+               <h2 class="oit-section-title oit-title-revel">Upcoming <br><span class="pl-265">in Dhaka</span></h2>
+            </div>
+         </div>
+         <div class="col-xl-4">
+            <div class="fx-events-intro mb-60 fade-anim" data-delay=".3">
+               <p>Trainings, workshops and roundtables convened by FinExcel. Every programme can also be delivered in-house for a single institution.</p>
+            </div>
+         </div>
+      </div>
+      <div class="row gx-30">
+         <div class="col-xl-7 mb-30">
+            <article class="fx-next-up fade-anim" data-delay=".3">
+               <div class="fx-next-up-media image-gsl">
+                  <div class="image-gsl-canvas"></div>
+                  <img src="assets/img/finexcel/ai-session.jpg" alt="Bankers at round tables during a FinExcel AI in Banking session">
+                  <span class="fx-next-up-badge">Next up</span>
+                  <time class="fx-next-up-date" datetime="2026-10-22"><span>22</span>Oct 2026</time>
+               </div>
+               <div class="fx-next-up-body">
+                  <p class="fx-next-up-meta"><span class="fx-tag">Training</span> Capacity Building · 2 days · Dhaka</p>
+                  <h3>AI in Banking &amp; NBFIs: from pilots to practice</h3>
+                  <p>Two days on moving AI from pilot projects into day-to-day practice across credit, operations and customer service — taught by people who have run those functions.</p>
+                  <a class="oit-btn-border btn-white-bg d-inline-flex align-items-center justify-content-between " href="#contact">
    <span>
-      <span class="text-1">Book a conversation</span>
-      <span class="text-2" aria-hidden="true">Book a conversation</span>
+      <span class="text-1">Register interest</span>
+      <span class="text-2" aria-hidden="true">Register interest</span>
    </span>
    <i><span><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M11.4801 6.10132e-06L12.4381 0.99062L12.3305 1.09859C9.55759 4.01224 9.66053 7.97757 11.492 9.87138L10.5199 10.8562C9.01152 9.29621 8.47367 6.87412 9.01459 4.46212L0.955362 12.6371L-0.000299374 11.6476L8.06131 3.46911C5.69918 4.00199 3.33666 3.42959 1.82692 1.86845L2.799 0.882416C4.65351 2.80007 8.59851 2.92281 11.4801 6.10132e-06Z" fill="currentcolor" /></svg><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M11.4801 6.10132e-06L12.4381 0.99062L12.3305 1.09859C9.55759 4.01224 9.66053 7.97757 11.492 9.87138L10.5199 10.8562C9.01152 9.29621 8.47367 6.87412 9.01459 4.46212L0.955362 12.6371L-0.000299374 11.6476L8.06131 3.46911C5.69918 4.00199 3.33666 3.42959 1.82692 1.86845L2.799 0.882416C4.65351 2.80007 8.59851 2.92281 11.4801 6.10132e-06Z" fill="currentcolor" /></svg></span></i>
 </a>
+               </div>
+            </article>
+         </div>
+         <div class="col-xl-5 mb-30">
+            <div class="fx-timeline fade-anim" data-delay=".5">
+               <div class="fx-timeline-head">
+                  <h3>Also coming up</h3>
+                  <div class="fx-chips-filter" role="group" aria-label="Filter programmes by format"><button type="button" class="fx-chip" aria-pressed="true" data-filter="all">All</button><button type="button" class="fx-chip" aria-pressed="false" data-filter="training">Training</button><button type="button" class="fx-chip" aria-pressed="false" data-filter="workshop">Workshop</button><button type="button" class="fx-chip" aria-pressed="false" data-filter="roundtable">Roundtable</button></div>
+               </div>
+<div class="fx-month" data-month>
+   <p class="fx-month-label">November 2026</p>
+   <ol class="fx-tl-list">
+<li class="fx-tl-item" data-format="workshop">
+   <time class="fx-tl-day" datetime="2026-11-05">05</time>
+   <div class="fx-tl-main">
+      <h4>Smart Loan Recovery &amp; NPL Management</h4>
+      <p><span class="fx-tag">Workshop</span> Capacity Building · 1 day</p>
    </div>
-   <div class="oit-text-slider-wrap" aria-hidden="true">
-      <div class="oit-text-slider-item d-flex align-items-center mb-20"><span>Let’s talk</span><span><svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M40 0L45.8469 25.8844L68.2843 11.7157L54.1156 34.1531L80 40L54.1156 45.8469L68.2843 68.2843L45.8469 54.1156L40 80L34.1531 54.1156L11.7157 68.2843L25.8844 45.8469L0 40L25.8844 34.1531L11.7157 11.7157L34.1531 25.8844L40 0Z" fill="currentcolor" /></svg></span><span>Let’s talk</span><span><svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M40 0L45.8469 25.8844L68.2843 11.7157L54.1156 34.1531L80 40L54.1156 45.8469L68.2843 68.2843L45.8469 54.1156L40 80L34.1531 54.1156L11.7157 68.2843L25.8844 45.8469L0 40L25.8844 34.1531L11.7157 11.7157L34.1531 25.8844L40 0Z" fill="currentcolor" /></svg></span><span>Let’s talk</span><span><svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M40 0L45.8469 25.8844L68.2843 11.7157L54.1156 34.1531L80 40L54.1156 45.8469L68.2843 68.2843L45.8469 54.1156L40 80L34.1531 54.1156L11.7157 68.2843L25.8844 45.8469L0 40L25.8844 34.1531L11.7157 11.7157L34.1531 25.8844L40 0Z" fill="currentcolor" /></svg></span><span>Let’s talk</span><span><svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M40 0L45.8469 25.8844L68.2843 11.7157L54.1156 34.1531L80 40L54.1156 45.8469L68.2843 68.2843L45.8469 54.1156L40 80L34.1531 54.1156L11.7157 68.2843L25.8844 45.8469L0 40L25.8844 34.1531L11.7157 11.7157L34.1531 25.8844L40 0Z" fill="currentcolor" /></svg></span></div>
-      <div class="oit-text-slider-item d-flex align-items-center slide-ltr"><span>Let’s talk</span><span><svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M40 0L45.8469 25.8844L68.2843 11.7157L54.1156 34.1531L80 40L54.1156 45.8469L68.2843 68.2843L45.8469 54.1156L40 80L34.1531 54.1156L11.7157 68.2843L25.8844 45.8469L0 40L25.8844 34.1531L11.7157 11.7157L34.1531 25.8844L40 0Z" fill="currentcolor" /></svg></span><span>Let’s talk</span><span><svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M40 0L45.8469 25.8844L68.2843 11.7157L54.1156 34.1531L80 40L54.1156 45.8469L68.2843 68.2843L45.8469 54.1156L40 80L34.1531 54.1156L11.7157 68.2843L25.8844 45.8469L0 40L25.8844 34.1531L11.7157 11.7157L34.1531 25.8844L40 0Z" fill="currentcolor" /></svg></span><span>Let’s talk</span><span><svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M40 0L45.8469 25.8844L68.2843 11.7157L54.1156 34.1531L80 40L54.1156 45.8469L68.2843 68.2843L45.8469 54.1156L40 80L34.1531 54.1156L11.7157 68.2843L25.8844 45.8469L0 40L25.8844 34.1531L11.7157 11.7157L34.1531 25.8844L40 0Z" fill="currentcolor" /></svg></span><span>Let’s talk</span><span><svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M40 0L45.8469 25.8844L68.2843 11.7157L54.1156 34.1531L80 40L54.1156 45.8469L68.2843 68.2843L45.8469 54.1156L40 80L34.1531 54.1156L11.7157 68.2843L25.8844 45.8469L0 40L25.8844 34.1531L11.7157 11.7157L34.1531 25.8844L40 0Z" fill="currentcolor" /></svg></span></div>
+   <a class="fx-tl-link" href="#contact" aria-label="Register interest: Smart Loan Recovery &amp; NPL Management"><i class="fal fa-arrow-right" aria-hidden="true"></i></a>
+</li>
+<li class="fx-tl-item" data-format="training">
+   <time class="fx-tl-day" datetime="2026-11-19">19</time>
+   <div class="fx-tl-main">
+      <h4>Ensuring Cyber Security Resilience</h4>
+      <p><span class="fx-tag">Training</span> Capacity Building · 2 days</p>
+   </div>
+   <a class="fx-tl-link" href="#contact" aria-label="Register interest: Ensuring Cyber Security Resilience"><i class="fal fa-arrow-right" aria-hidden="true"></i></a>
+</li>
+   </ol>
+</div>
+<div class="fx-month" data-month>
+   <p class="fx-month-label">December 2026</p>
+   <ol class="fx-tl-list">
+<li class="fx-tl-item" data-format="roundtable">
+   <time class="fx-tl-day" datetime="2026-12-03">03</time>
+   <div class="fx-tl-main">
+      <h4>Banking leaders’ roundtable on sector reform</h4>
+      <p><span class="fx-tag">Roundtable</span> Advocacy · Half day</p>
+   </div>
+   <a class="fx-tl-link" href="#contact" aria-label="Register interest: Banking leaders’ roundtable on sector reform"><i class="fal fa-arrow-right" aria-hidden="true"></i></a>
+</li>
+   </ol>
+</div>
+               <p class="fx-tl-empty" hidden>No programmes in this format yet — <a href="#contact">ask about an in-house version</a>.</p>
+               <p class="fx-tl-note">All programmes in Dhaka. Dates are indicative until the 2026 programme calendar is published.</p>
+            </div>
+         </div>
+      </div>
    </div>
 </section>
-<!-- closing marquee end -->
+<!-- events area end -->
          </main>
 
-<footer class="fx-footer">
-   <div class="oit-footer-area pt-100 pb-70" data-bg-color="#06121f">
+<footer class="fx-footer fx-sd-footer" data-bg-color="#06121f">
+   <div class="oit-footer-2-area z-index-1 pt-130 pb-30 p-relative">
+      <img class="fx-footer-mark" src="assets/img/mark-bg.svg" alt="" aria-hidden="true">
       <div class="container">
          <div class="row">
-            <div class="col-xl-4 col-lg-6">
-               <div class="oit-footer-widget mb-30 fade-anim" data-delay=".3">
-                  <div class="oit-footer-widget-menu mb-120">
+            <div class="col-xl-7 col-lg-6 col-md-4">
+               <div class="oit-footer-2-widget footer-widget-2-1 pb-195">
+                  <div class="oit-footer-2-widget-logo">
+                     <a href="index.html"><img src="assets/img/logo.png" width="414" height="90" alt="FinExcel — Financial Excellence Limited"></a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xl-5 col-lg-6 col-md-8">
+               <div class="oit-footer-2-widget footer-widget-2-2 mb-60">
+                  <h2 class="oit-footer-2-widget-title">About us</h2>
+                  <p>Advisory, capacity building and sector advocacy <br> for Bangladesh's financial sector.</p>
+                  <p class="fx-footer-contact"><a href="mailto:info@finexcelbd.com">info@finexcelbd.com</a><br><a href="https://maps.app.goo.gl/2Chs2JFJoDxKYVNd6" target="_blank" rel="noopener">F1, Plot 16, Road 23, Block B, Banani, Dhaka 1213</a></p>
+               </div>
+            </div>
+            <div class="col-xl-7 col-md-4">
+               <div class="oit-footer-2-widget footer-widget-2-3 mb-60">
+                  <h2 class="oit-footer-2-widget-title">Social media</h2>
+                  <div class="oit-footer-2-widget-social">
+                     <a href="https://www.linkedin.com/company/financial-excellence-ltd/" target="_blank" rel="noopener" aria-label="FinExcel on LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                     <a href="https://www.facebook.com/financialexcellence/" target="_blank" rel="noopener" aria-label="FinExcel on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                     <a href="https://x.com/finexcelbd" target="_blank" rel="noopener" aria-label="FinExcel on X"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M11.6468 8.46864L18.9321 0H17.2057L10.8799 7.3532L5.82741 0H0L7.6403 11.1193L0 20H1.72649L8.40678 12.2348L13.7425 20H19.5699L11.6464 8.46864H11.6468ZM9.28211 11.2173L8.50799 10.1101L2.34857 1.29967H5.00037L9.97108 8.40994L10.7452 9.51718L17.2066 18.7594H14.5548L9.28211 11.2177V11.2173Z" fill="currentcolor" /></svg></a>
+                     <a href="https://www.instagram.com/finexcelbd/" target="_blank" rel="noopener" aria-label="FinExcel on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xl-5 col-md-8">
+               <div class="oit-footer-2-widget footer-widget-2-4 mb-60">
+                  <h2 class="oit-footer-2-widget-title">Navigation</h2>
+                  <div class="oit-footer-2-widget-menu">
                      <ul>
-<li><a href="index.html"><i><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 0C14.331 13.782 13.7805 14.331 0 15C13.782 15.669 14.331 16.2195 15 30C15.669 16.218 16.2195 15.669 30 15C16.218 14.331 15.669 13.7805 15 0Z" fill="currentcolor" /></svg></i><span>Home</span></a></li>
-<li><a href="about-v2.html"><i><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 0C14.331 13.782 13.7805 14.331 0 15C13.782 15.669 14.331 16.2195 15 30C15.669 16.218 16.2195 15.669 30 15C16.218 14.331 15.669 13.7805 15 0Z" fill="currentcolor" /></svg></i><span>About</span></a></li>
-<li><a href="#practices"><i><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 0C14.331 13.782 13.7805 14.331 0 15C13.782 15.669 14.331 16.2195 15 30C15.669 16.218 16.2195 15.669 30 15C16.218 14.331 15.669 13.7805 15 0Z" fill="currentcolor" /></svg></i><span>Practices</span></a></li>
-<li><a href="#leadership"><i><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 0C14.331 13.782 13.7805 14.331 0 15C13.782 15.669 14.331 16.2195 15 30C15.669 16.218 16.2195 15.669 30 15C16.218 14.331 15.669 13.7805 15 0Z" fill="currentcolor" /></svg></i><span>Leadership</span></a></li>
-<li><a href="blog.html"><i><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 0C14.331 13.782 13.7805 14.331 0 15C13.782 15.669 14.331 16.2195 15 30C15.669 16.218 16.2195 15.669 30 15C16.218 14.331 15.669 13.7805 15 0Z" fill="currentcolor" /></svg></i><span>Insights</span></a></li>
-<li><a href="#contact"><i><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 0C14.331 13.782 13.7805 14.331 0 15C13.782 15.669 14.331 16.2195 15 30C15.669 16.218 16.2195 15.669 30 15C16.218 14.331 15.669 13.7805 15 0Z" fill="currentcolor" /></svg></i><span>Contact</span></a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-v2.html">About</a></li>
+                        <li><a href="#practices">Practices</a></li>
+                        <li><a href="#work">Programmes</a></li>
+                        <li><a href="#leadership">Leadership</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="blog.html">Insights</a></li>
+                        <li><a href="#contact">Contact</a></li>
                      </ul>
                   </div>
-                  <div class="oit-footer-widget-rules d-flex align-items-center justify-content-between">
-                     <a class="border-line" href="#">Privacy policy</a>
-                     <a class="border-line" href="#">Terms of use</a>
-                  </div>
                </div>
             </div>
-            <div class="col-xl-4 col-lg-6">
-               <div class="oit-footer-widget d-flex mb-30 fade-anim" data-delay=".5">
-                  <div class="oit-footer-widget-info d-flex flex-column justify-content-between">
-                     <a href="mailto:info@finexcelbd.com"><span class="border-line">info@finexcelbd.com</span></a>
-                     <a href="#contact"><span class="border-line">Saturday–Thursday, 10:00–18:00</span></a>
-                     <a href="https://maps.app.goo.gl/2Chs2JFJoDxKYVNd6" target="_blank" rel="noopener">
-                        <span class="border-line">F1, Plot 16, Road 23, Block B, <br> Banani, Dhaka 1213</span>
-                     </a>
-                  </div>
+         </div>
+      </div>
+   </div>
+   <div class="oit-copyright-area oit-copyright-2-style">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-6">
+               <div class="oit-copyright-left text-center text-md-start">
+                  <p>© 2026 Financial Excellence Limited. All rights reserved.</p>
                </div>
             </div>
-            <div class="col-xl-4 col-lg-6">
-               <div class="oit-footer-widget mb-30 fade-anim" data-delay=".7">
-                  <div class="oit-footer-widget-social mb-80">
-<a class="d-flex align-items-center justify-content-between" href="https://www.linkedin.com/company/financial-excellence-ltd/" target="_blank" rel="noopener"><span>LinkedIn</span><i><svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M18 6.22949V7.77234L17.8322 7.7714C13.408 7.85074 10.4548 11.0505 10.4548 14L8.93187 13.9991C8.93205 11.5696 10.36 9.23637 12.634 7.7714L0 7.7714L0.000926228 6.23136L12.6396 6.23043C10.3625 4.76558 8.93094 2.43142 8.93094 0L10.4548 0C10.4548 2.98668 13.4828 6.22934 18 6.22949Z" fill="currentcolor" /></svg></i></a>
-<a class="d-flex align-items-center justify-content-between" href="https://www.facebook.com/financialexcellence/" target="_blank" rel="noopener"><span>Facebook</span><i><svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M18 6.22949V7.77234L17.8322 7.7714C13.408 7.85074 10.4548 11.0505 10.4548 14L8.93187 13.9991C8.93205 11.5696 10.36 9.23637 12.634 7.7714L0 7.7714L0.000926228 6.23136L12.6396 6.23043C10.3625 4.76558 8.93094 2.43142 8.93094 0L10.4548 0C10.4548 2.98668 13.4828 6.22934 18 6.22949Z" fill="currentcolor" /></svg></i></a>
-<a class="d-flex align-items-center justify-content-between" href="https://x.com/finexcelbd" target="_blank" rel="noopener"><span>X</span><i><svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M18 6.22949V7.77234L17.8322 7.7714C13.408 7.85074 10.4548 11.0505 10.4548 14L8.93187 13.9991C8.93205 11.5696 10.36 9.23637 12.634 7.7714L0 7.7714L0.000926228 6.23136L12.6396 6.23043C10.3625 4.76558 8.93094 2.43142 8.93094 0L10.4548 0C10.4548 2.98668 13.4828 6.22934 18 6.22949Z" fill="currentcolor" /></svg></i></a>
-<a class="d-flex align-items-center justify-content-between" href="https://www.instagram.com/finexcelbd/" target="_blank" rel="noopener"><span>Instagram</span><i><svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M18 6.22949V7.77234L17.8322 7.7714C13.408 7.85074 10.4548 11.0505 10.4548 14L8.93187 13.9991C8.93205 11.5696 10.36 9.23637 12.634 7.7714L0 7.7714L0.000926228 6.23136L12.6396 6.23043C10.3625 4.76558 8.93094 2.43142 8.93094 0L10.4548 0C10.4548 2.98668 13.4828 6.22934 18 6.22949Z" fill="currentcolor" /></svg></i></a>
-                  </div>
-                  <div class="oit-footer-widget-copyright">
-                     <p>© 2026 Financial Excellence Limited. All rights reserved.</p>
-                  </div>
+            <div class="col-md-6">
+               <div class="oit-copyright-right text-center text-md-end">
+                  <a href="#">Privacy policy</a>
+                  <span> / </span>
+                  <a href="#">Terms of use</a>
                </div>
             </div>
          </div>
@@ -1073,6 +1204,29 @@
    <script src="assets/js/carousel-int.js"></script>
    <script src="assets/js/script.js"></script>
    <script src="assets/js/image-gsl-effect.js"></script>
+   <script>
+      // Programme timeline filter: hides non-matching rows and any month left empty
+      (function () {
+         var chips = document.querySelectorAll('.fx-chip');
+         var items = document.querySelectorAll('.fx-tl-item');
+         var months = document.querySelectorAll('[data-month]');
+         var empty = document.querySelector('.fx-tl-empty');
+         chips.forEach(function (chip) {
+            chip.addEventListener('click', function () {
+               var f = chip.dataset.filter;
+               chips.forEach(function (c) { c.setAttribute('aria-pressed', String(c === chip)); });
+               items.forEach(function (r) { r.hidden = f !== 'all' && r.dataset.format !== f; });
+               var shown = 0;
+               months.forEach(function (m) {
+                  var n = m.querySelectorAll('.fx-tl-item:not([hidden])').length;
+                  m.hidden = n === 0;
+                  shown += n;
+               });
+               empty.hidden = shown > 0;
+            });
+         });
+      })();
+   </script>
 </body>
 
 </html>

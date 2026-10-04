@@ -1,0 +1,21 @@
+# Track only the pages the FinExcel site uses. The other Reak template demo
+# pages (index-1..5, *-dark variants, etc.) and local concept files stay on disk
+# but out of the repo. To publish another page, add a "!page.html" line below.
+*.html
+!index.html
+!404.html
+!about-v2.html
+!blog.html
+!blog-standard.html
+!project-v1.html
+!project-details-v1.html
+!service-details.html
+!team.html
+!team-details.html
+
+# Concept-only stylesheet (index-v4-concept.html)
+assets/css/finexcel-v4.css
+
+# Local tooling
+.claude/
+.DS_Store
